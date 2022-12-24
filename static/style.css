@@ -1,0 +1,44 @@
+.header {
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+  padding: 20px 10px;
+}
+
+.header a {
+  position: fixed;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+}
+
+.header a.active {
+  text-decoration: underline;
+}
+
+.vl {
+  border-left: 6px solid gray;
+  height: 50px;
+  position: relative;
+}
+
+
+p{
+  font-family: 'Courier New', monospace;
+  text-align: left;
+  color: black;
+  height: 100px;
+  width: 500px;
+  font-size: 20px;
+  text-indent: 30px;
+  text-transform: uppercase;
+}
