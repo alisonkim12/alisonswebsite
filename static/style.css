@@ -2,6 +2,7 @@
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   overflow: hidden;
   padding: 20px 10px;
+  padding-left:10px
 }
 
 .header a {
@@ -35,7 +36,7 @@
 
 .vl {
   border-left: 3px solid black;
-  height: 20px;
+  height: 50px;
   position: relative;
 }
 
