@@ -1,11 +1,11 @@
 .header {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   overflow: hidden;
   padding: 20px 10px;
 }
 
 .header a {
-  position: fixed;
+  /*position: fixed;*/
   float: left;
   color: black;
   text-align: center;
@@ -21,19 +21,26 @@
   font-size: 25px;
 }
 
+.header a:hover {
+  text-decoration: underline;
+
+}
 .header a.active {
   text-decoration: underline;
 }
 
+.header-left {
+  float: left;
+}
+
 .vl {
-  border-left: 6px solid gray;
-  height: 50px;
+  border-left: 3px solid black;
+  height: 20px;
   position: relative;
 }
 
-
 p {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   text-align: left;
   color: black;
   height: 100px;
@@ -41,4 +48,12 @@ p {
   font-size: 20px;
   text-indent: 30px;
   text-transform: uppercase;
+}
+
+p.uppercase {
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
 }
