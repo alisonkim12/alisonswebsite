@@ -52,11 +52,13 @@ function getDateAndTime() {
 }
 
 async function fetchLastCommitDate() {
-    const response = await fetch('https://api.github.com/repos/<your-username>/<your-repo>/commits/main');
+    const response = await fetch('https://api.github.com/repos/alisonkim12/alisonkim12/commits/main');
     const data = await response.json();
     const lastCommitDate = new Date(data.commit.committer.date);
     document.getElementById('last-updated-website"').innerText = `${lastCommitDate.toLocaleDateString()} ${lastCommitDate.toLocaleTimeString()}`;
 }
+
+fetchLastCommitDate();
 
 
 // function getDateAndTime(){
