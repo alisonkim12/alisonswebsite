@@ -1,0 +1,220 @@
+
+#section-two{
+    position: relative;
+    padding: 30px 25px;
+
+}
+
+.project-index{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding-top: 5px;
+    overflow-y: hidden; /* Disable scrolling on the parent */
+    height: fit-content;
+}
+
+#project-section-title{
+    font-family: "DM Mono", monospace;
+    font-size: 1.3rem;
+    position: relative;
+    color: #303030;
+    opacity: 0.80;
+}
+
+.project-index .index-list{
+    position: relative; 
+    overflow: scroll;
+}
+
+.index-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    position: relative;
+    font-family: "Commissioner", sans-serif;
+    font-weight: 300;
+}
+
+.index-table th, .index-table td {
+    border-bottom: 1px solid #dddddd;
+    padding: 7px 0px;
+    text-align: 'left';
+    z-index: 1002;
+    opacity: 0.95;
+    letter-spacing: 0.5px;
+}
+
+
+.index-table tbody tr:hover{
+    opacity: 100%;
+}
+
+.project-index .index-media{
+    border-radius: 5px;
+    margin-left: 5%;
+    height: 90%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em; /* Adds gap between grid items */
+    overflow: scroll;
+    position: relative;
+
+}
+
+.project-index .index-media .project-container{
+    /* margin-left: 1em;
+    margin-bottom: 1em; */
+    background-color: rgba(0,0,0,0.025);
+    border-radius: 2%;
+    height: 250px;
+    /* border: 1px solid black; */
+    position: relative;
+    overflow-y: scroll;
+    margin-left: 0; /* Remove left margin if using grid gap */
+    margin-right: 0; /* Remove right margin if using grid gap */
+}
+
+.project-index .index-media .project-container.hidden{
+    display: none;
+}
+
+.project-index .index-media .project-container:hover{
+    background-color: rgba(0,0,0,0.05);
+    transition: background-color 0.5s ease;
+}
+
+.project-index .index-media .project-container .project-title{
+    font-family: "Sono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.8em;
+    padding-top: 10px;
+    letter-spacing: 0em;
+    position: relative;
+    height: 10%;
+    text-align: center;
+    text-overflow: clip;
+    margin: 0 auto;
+    width: 90%;
+    overflow: hidden; /* Ensure overflow is hidden */
+    white-space: nowrap; /* Ensure text doesn't wrap */
+}
+
+.project-index .index-media .project-container .project-media{
+    background-color: #ccc;
+    border: 1px solid black;
+    width: 90%;
+    height: 55%;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.project-index .index-media .project-container .project-tag-container{
+    margin: 0 auto;
+    height: fit-content;
+    width: 90%;
+    padding: 5px 0px;
+    /* width: fit-content; */
+}
+
+.project-index .index-media .project-container .project-tags{
+    font-family: "DM Mono", monospace;
+    padding: 3px 4px;
+    border-radius: 10px;
+    background-color: rgba(115, 87, 255, 0.1);
+    font-size: 0.5em;
+    position: relative;
+    margin: 5px;
+    /* margin: 8px auto; */
+}
+
+.project-index .index-media .project-container .project-description{
+    font-family: "Sono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 0.3em;
+    text-overflow: ellipsis;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+video{
+    /* padding: 10px; */
+    object-fit: cover; 
+    background-color: transparent; 
+    outline: none; 
+    height: 90%;
+}
+
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+video::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
+
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display {
+    display: none !important;
+}
+
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-fullscreen-button {
+    display: none !important;
+}
+
+u{
+    text-decoration: none;
+}
+
+.project-name{
+    font-family: "Sono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 12px;
+    padding: 5px 0px;
+    letter-spacing: 0em;
+}
+
+.project-description{
+    font-size: 9px;
+    padding: 4px 0px;
+}
+
+.tool-button{
+    font-family: "DM Mono", monospace;
+    padding : 3px 4px;
+    border-radius: 10px;
+    background-color: rgba(115, 87, 255, 0.1);
+    font-size: 7.5px;
+    margin-right: 4px;
+    position: relative;
+}
+
+.project-links{
+    text-decoration: none;
+    transition: text-decoration 1s ease-in-out;
+}
+
+
+.project-links:hover{
+    text-decoration: underline;
+}

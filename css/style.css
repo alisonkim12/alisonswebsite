@@ -1,0 +1,371 @@
+@font-face {
+    font-family: 'Yeomonstrum';
+    src: url('../fonts/4Yeomonstrum-XGj (2).woff2') format('woff2')
+}
+@font-face {
+    font-family: 'Abstract';
+    src: url('../fonts/Abstract-dvPl (1).woff2') format('woff2')
+}
+@font-face { 
+    font-family: 'Badabum';
+    src: url('../fonts/BadabumHappyloverstowneu-lzxZ.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'Becross';
+    src: url('../fonts/Becross-1GPZ.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'BigPopcorn';
+    src: url('../fonts/BigPopcornTimeRegular-6Y4YM.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'BurnedLetters';
+    src: url('../fonts/BurnedLettersByMartaVanEck-j7M9.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'ClownNormal';
+    src: url('../fonts/ClownNormal-JGLx.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'CrazyDaisy';
+    src: url('../fonts/CrazyDaisyMedium-9PzZ.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'Dominatrix';
+    src: url('../fonts/Dominatrix-ng44.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'Gosford';
+    src: url('../fonts/Gosford-8pA.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'Gridlockd';
+    src: url('../fonts/Gridlockd-Vq9w.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'HappyFestive';
+    src: url('../fonts/HappyFestive-MAYVn.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'HeadlinerNo45';
+    src: url('../fonts/HeadlinerNo45-59y8.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'HeosDemo';
+    src: url('../fonts/HeosDemo-8ML4B.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'Hotsnow';
+    src: url('../fonts/HotsnowFreeVertionRegular-mLO6P.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'KidnappedAtOldTimes';
+    src: url('../fonts/KidnappedAtOldTimesFree-Polr.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'LightNo1Regular';
+    src: url('../fonts/LightNo1Regular-ywRLq.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'Milkyway';
+    src: url('../fonts/MilkyWay-71P.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'Plexifont';
+    src: url('../fonts/PlexifontBv-xBV.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'Retaliation';
+    src: url('../fonts/Retaliation-8Z5z.woff2') format('woff2')
+}
+@font-face {
+    font-family: 'Scrapitup';
+    src: url('../fonts/Scrapitup-EEK4.woff2') format('woff2')
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: white;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 100 20"><text x="0" y="15" font-size="10" font-family="sans-serif">Take me somewhere</text></svg>'), auto; 
+}
+
+a {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 100 20"><text x="0" y="15" font-size="10" font-family="sans-serif">Here?</text></svg>'), pointer;
+}
+
+nav{
+    position: sticky;
+    display: inline-block;
+    width: 96vw;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    padding-top: 20px;
+    height: fit-content;
+}
+
+.left-header{
+    position: relative;
+    height: auto;
+    display: flex;
+    /* top: 10px; */
+}
+
+.left-header > *{
+    position: absolute;
+    left: 0;
+}
+
+#online{
+    font-optical-sizing: auto;
+}
+
+#sub-title{
+    position: relative;
+    top: 10px;
+    font-size: 9.5px;    
+    letter-spacing: 0.14em;
+    font-family: "Sono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    width: 340px;
+    left: 35%;
+    text-align: center;
+}
+
+a{    
+    color: rgba(0,0,0,0.8);
+    text-decoration: underline;
+}
+
+.title{
+    letter-spacing: 0.4em;
+    font-size: 150%;
+    position: absolute;
+    height: 35px;
+    width: 400px;
+    overflow:hidden;
+    font-family: 'Rubik Lines', system-ui;
+    float: left;
+    padding-right: 4%;
+    /* border-bottom: 1px solid black; */
+}
+
+.right-header{
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+    position: relative;
+    display: block;
+    width: auto;
+    font-size: 13px;
+    z-index: -100;
+    top: -10px;
+    margin-left: auto;
+    
+}
+
+.right-header > span{
+    display: block;
+}
+
+#line-3{
+    display: inline;
+    padding: 0;
+    position: absolute;
+    right: -5px;
+    top: 28px;
+    width: fit-content;
+    height: fit-content;
+}
+
+#weather-icon{
+    height: 30px;
+    width: 30px;
+    display: inline;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+    overflow: hidden;
+    padding:0;
+}
+
+#section-one{
+    position: relative;
+    display: flex;
+    padding: 0;
+    width: 100%;
+}
+
+.about-para{
+    /* font-family: 'Lora', serif; */
+    position: relative;
+    line-height: 1.2em;
+    padding: 0px 25px;
+    margin-right: 10px;
+    border: none;
+    padding-top: 20px;
+    width: 50%;
+}
+
+.about-para .about-subheading{
+    position: relative;      
+    font-size: 90%; 
+    font-family: "Sono", monospace;
+    letter-spacing: 0.3em;
+}
+
+.about-para p{
+    font-size: 75%;
+    font-family: "Commissioner", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "FLAR" 0,
+        "VOLM" 0;
+    color: rgba(0,0,0,0.9);
+    line-height: 1.4em;
+    margin-bottom: 0.5em;
+}
+
+
+.about-para ul{
+    font-size: 70%;
+    font-family: "Commissioner", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "FLAR" 0,
+        "VOLM" 0;
+    color: rgba(0,0,0,0.9);
+    line-height: 1.6em;
+    padding-left: 1.5em;
+}
+
+.about-para ul li {
+   margin: 0.5em 0em;
+   display: none;
+}
+
+.about-para ul li.visible{
+    display: block;
+ }
+
+.experience-button{
+    transition-duration: 0.4s;
+    font-size: 0.6em;
+    font-family: "Commissioner", sans-serif;
+    border-radius: 8px;
+    padding: 4px;
+    border: 0.5px solid black;
+    margin: 0 5px;
+}
+
+.experience-button.selected{
+    background-color: #BEEB9F; /* Green */
+    color: black;    
+}
+
+.experience-button:hover {
+    background-color: #BEEB9F; /* Green */
+    color: white;    
+}
+
+.project-filter{
+    transition-duration: 0.4s;
+    font-size: 0.6em;
+    font-family: "Commissioner", sans-serif;
+    border-radius: 8px;
+    padding: 4px;
+    border: 0.5px solid black;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.project-filter.selected{
+    background-color: rgb(189, 152, 224);
+}
+
+.project-filter:hover {
+    background-color: azure; 
+}
+
+/* .picture {
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    position: relative;
+    margin: 10px;
+    width: 60%;
+} */
+
+.picture-caption{
+    position: relative;
+    width: 100%;
+    display: flex;
+    font-family: "Sono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    font-size: 0.5em;
+    line-height: 2em;
+    align-self: center; 
+    margin: 0 auto;
+}
+
+.right-column{
+    position: relative;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.right-column span{
+    position: relative;
+    /* display: flex; */
+    font-family: "Commissioner", sans-serif;
+    font-weight: 300;
+    font-size: 0.65rem;
+    line-height: 1.4em;
+    color: rgba(0,0,0,0.9);
+    padding: 0.15em 0;
+    letter-spacing: 0.05em;
+}
+
+.right-column span a{
+    text-decoration: none;
+
+}
+
+.right-column .section-title{
+    font-size: 0.7rem;
+    line-height: 1.3em;
+    padding: 0.5em 0;
+    letter-spacing: 0.2em;
+    color: #303030;
+    padding-top: 2em;
+    font-family: "DM Mono", monospace;
+
+}
+.ri-add-line{
+    padding-right: 4px;
+}
+
+.ri-corner-down-right-line{
+    padding-right: 4px;
+}
+
+.ri-arrow-right-line {
+    padding-left: 4px;
+}

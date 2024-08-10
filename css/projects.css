@@ -1,0 +1,116 @@
+#section-project-page{
+    position: relative;
+    display: grid;
+    padding: 0px 25px;
+}
+
+.page-buttons{
+    position: relative;
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+    top: 40px;
+}
+
+.page-buttons span{
+    font-family: "Commissioner", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: rgba(0,0,0,0.9);
+    font-size: 10px;
+    position: relative;
+    letter-spacing: 0.05em;
+    width: fit-content;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+}
+
+.page-buttons span a{
+    text-decoration: none;
+}
+
+.project-header{
+    position: relative;
+    display: flex; /* Change display property to flex */
+    justify-content: center;
+    line-height: 1.2em;
+    margin: 0 auto; /* Optional: Centers the element horizontally */
+    flex-direction: column;
+    max-width: 60%;
+    top: -10px;
+    text-align: center;
+    /* background-color: rgba(140, 190, 178,0.3); */
+    padding: 0px 70px;
+    padding-top: 10px;
+    border-radius: 30px;
+    width: fit-content;
+}
+
+#project-title{
+    position: relative;      
+    font-size: 120%; 
+    font-family: "Sono", monospace;
+    letter-spacing: 0.12em;
+    line-height: 1.3em;
+    padding-bottom: 0.3em;
+    width: fit-content;
+}
+
+.project-details{
+    font-family: "DM Mono", monospace;
+    color: rgba(0,0,0,0.75);
+    border-top: 0.5px solid gray;
+    padding: 7px 5px;
+
+}
+
+#project-year{
+    position: relative;
+    padding-right: 15px;
+    font-size: 10px;
+}
+
+#project-tools{
+    position: relative;
+    padding-right: 5px;
+    font-style: italic;
+    font-size: 9px;
+}
+
+#project-link {
+    position: relative;
+    font-size: 9px;
+    padding-top: 1px;
+    letter-spacing: 0;
+}
+
+#project-link a{
+    text-decoration: none;
+}
+
+ /* have these be more customized by each page design? */
+
+
+/* #project-description{
+    font-size: 75%;
+    font-family: "Commissioner", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "FLAR" 0,
+        "VOLM" 0;
+    color: rgba(0,0,0,0.95);
+    line-height: 1.4em;
+} */
+/* #description-header{
+    color: solid black;
+    opacity: 0.65;
+    font-size: 15px;
+}
+
+#description-body p{
+    padding: 20px 0px;
+} */

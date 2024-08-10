@@ -1,0 +1,92 @@
+/* 
+#project-description{
+
+} */
+.marquee-container {
+    overflow: hidden;
+    width: 85%;
+    height: fit-content;
+    display: flex; 
+    flex-direction: row;
+    position: relative;
+    background-color: rgba(190, 235, 159, 0.4);
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    top: 10;
+  }
+  
+  .marquee {
+    position: relative;
+    width: fit-content; 
+  }
+  
+  .marquee-content {
+    margin-top: 15;
+    margin-bottom: 45;
+    display: flex;
+    animation: marquee-animation 40s linear infinite; 
+  }
+  
+  .marquee-content img {
+    flex: 0 0 auto;
+    margin-right: 20px; 
+    width: 200px;
+    border-radius: 10px;
+    background-color: transparent;
+  }
+
+  .marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+  }
+  
+  @keyframes marquee-animation {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  #marquee-caption{ 
+    display: block;
+    position: relative;
+    /* margin: 0 auto;  */
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 10px;
+    font-family: "Sono", monospace;
+    letter-spacing: 0.1em;
+    width: fit-content;
+    height: fit-content;
+    top: -10px;
+  }
+
+  .project-description{
+    position: relative;
+    width: 85%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-family: "Commissioner", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "FLAR" 0,
+        "VOLM" 0;
+    color: rgba(0,0,0,0.95);
+    line-height: 1.4em;
+    font-size: 13px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .project-description p{
+    margin-bottom: 1em;
+  }
+
