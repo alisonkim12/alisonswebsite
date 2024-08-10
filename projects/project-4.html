@@ -54,10 +54,10 @@
     <section>
         <nav id = "nav-bar" class="banner">
             <div class="left-header">
-                <div class = "title">
+                <a style = "text-decoration: none;" href = "/index.html" class = "title">
                     <span>alisonis.</span>
                     <span id = "online">online</span>
-                </div>
+                </a>
             </div>
             <div id = "sub-title"></div>
             <div class = "right-header">
@@ -73,31 +73,33 @@
             <span id = "link-next-project"><a href = "./project-5.html">ASCII <i class="ri-arrow-right-up-line"></i></a></span>
         </div>
         <div class="project-header">
-            <div id="project-title">Visualizing Spotify Playlists</div>
+            <div id="project-title">play (with) music</div>
             <div class = "project-details">
-                <span id="project-year">2024</span><span id="project-tools">python, javascript, ruby, css, c++</span>
+                <span id="project-year">2024</span><span id="project-tools">Spotify API, d3.js, NLTK, scikit-learn, jQuery</span>
                 <div id="project-link">
-                    <a href = "">project link <i class="ri-link"></i></a>
+                    <a href = "https://github.com/alisonkim12/play-with-music" target="_blank">github repo <i class="ri-link"></i></a>
                 </div>
             </div>
         </div>
         <div id="description-body">
             <div>
-                <p style = "font-style: italic; font-size: 1em; color: darkgray;">INTRO PARAGRAPH: Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi temporibus perferendis dicta commodi explicabo suscipit expedita non ab! Perferendis, ipsa atque est dignissimos temporibus aliquam amet similique iure officiis laboriosam ex! Aliquid tempore totam natus animi dolores, asperiores facilis ipsam, quod, pariatur culpa ipsa. Molestias sequi eos facilis quisquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem modi quasi veniam nobis officiis? Explicabo deserunt corporis dignissimos placeat vel et error quia veniam? Perferendis, voluptatibus placeat sequi laudantium asperiores assumenda quod, rerum temporibus deleniti nisi ipsa dolores veritatis adipisci.</p>
+                <p style = "font-style: italic; font-size: 1em; color: rgba(0,0,0,0.6);">Play (with) music represents a unique exploration into the intersection of music data analysis and interactive visualization. Designed to enhance user engagement with Spotify playlists, it utilizes robust technologies like d3.js and NLTK to create a dynamic interface where each song is visually represented by animated circles. The project incorporates six distinct visualization filters derived from Spotify API data, including criteria such as decade, genre, lyric similarity, popularity, energy, and danceability. Lyrics for each song are sourced through the LyricsGenius API, undergo comprehensive preprocessing, clustering, and subsequent visualization using advanced techniques like TF-IDF vectorization, K-Means clustering, and Principal Component Analysis. Technical implementation includes ensuring security and authentication protocols such as SSL/TLS compatibility, OAuth2 authorization flow management, and robust handling of network issues through Python's requests.Session object. Supported by a diverse toolkit including Spotify API, scikit-learn, matplotlib, jQuery, Flask, and Python, this project aims to provide a comprehensive framework for exploring and interpreting music data with precision and depth.
+                </p>
             </div>
             <div style = "width: 100%; padding-bottom: 0.5em; border-bottom: 0.5px solid black;">Project backend</div>
             <div class = "project-section" style = "font-style: italic;">Part 1: Spotify API Info (main.py) 
             </div>
-            <div style = "display: flex">
-                <div style = "width: 40%;">
-                    <p>The main backend script (main.py) utilizing the Spotify API and Flask, allows querying Spotify playlists and processing track information. The script starts by importing necessary libraries: `requests` and `urllib.parse` for handling HTTP requests and URL parsing, `urllib.error` for HTTP error handling, `requests.adapters.HTTPAdapter` and `urllib3.util.retry.Retry` for configuring request retries, `time` for delays, `json` for JSON operations, `ssl` for SSL configurations, `datetime` for date and time operations, and Flask components for web server functionality. 
-                    </p>
-                    <p>A function `sslwrap(func)` is defined using the `wraps` decorator from `functools`, ensuring SSL/TLS protocol version compatibility by wrapping the SSL socket. The Flask application is initialized with a secret key for session management. Essential Spotify API credentials and endpoints are defined, and a `requests.Session` object `my_session` is configured with retry capabilities for handling transient network issues.
-                    </p>
-                    <p>The Flask route `/` serves the index page, rendering `index.html`. The `/login` route initiates the OAuth2 authorization process with Spotify, redirecting users to Spotify's authorization page with necessary parameters. The `/callback` route handles the OAuth2 callback, exchanging the authorization code for an access token and storing token information in the session. The `/refresh-token` route handles token refresh logic, sending a POST request to the Spotify API to obtain a new access token using the refresh token and updating the session with the new token information.
-                    </p>
+            <div>
+                <div style = "width: 60%; margin-left: 2%; margin-bottom: 1%; float: right;">
+                    <img style = "width: 100%;" src = "../media/Spotify/landingpage.png">
+                    <div class = "media-caption">[ main page ]</div>
                 </div>
-                <div style = "width: 60%; margin-left: 2%; margin-bottom: 1%; background-color: rgba(0,0,0,0.05);"></div>
+                <p>The main backend script (main.py) utilizing the Spotify API and Flask, allows querying Spotify playlists and processing track information. The script starts by importing necessary libraries: `requests` and `urllib.parse` for handling HTTP requests and URL parsing, `urllib.error` for HTTP error handling, `requests.adapters.HTTPAdapter` and `urllib3.util.retry.Retry` for configuring request retries, `time` for delays, `json` for JSON operations, `ssl` for SSL configurations, `datetime` for date and time operations, and Flask components for web server functionality. 
+                </p>
+                <p>A function `sslwrap(func)` is defined using the `wraps` decorator from `functools`, ensuring SSL/TLS protocol version compatibility by wrapping the SSL socket. The Flask application is initialized with a secret key for session management. Essential Spotify API credentials and endpoints are defined, and a `requests.Session` object `my_session` is configured with retry capabilities for handling transient network issues.
+                </p>
+                <p>The Flask route `/` serves the index page, rendering `index.html`. The `/login` route initiates the OAuth2 authorization process with Spotify, redirecting users to Spotify's authorization page with necessary parameters. The `/callback` route handles the OAuth2 callback, exchanging the authorization code for an access token and storing token information in the session. The `/refresh-token` route handles token refresh logic, sending a POST request to the Spotify API to obtain a new access token using the refresh token and updating the session with the new token information.
+                </p>
             </div>
             <p>The `/playlists` route fetches the user's playlists using the stored access token, checking for token expiration and refreshing if necessary. It sends a GET request to the Spotify API to retrieve playlists, iterates through each playlist to fetch track information by calling a helper function that retrieves detailed information about each track, including artist information, genres, danceability, energy, and album details. This function handles multiple artists, fetches genre information from the Spotify API, retrieves audio features, and manages potential request exceptions. Then I process each track using `get_track_info` [what does this exactly do], and store the results in `master_dataset`. The script writes this data to a JSON file, `tracks.json`, and triggers further processing by calling `preprocessing_lyrics` and `analyzing_song_lyrics` functions from other python scripts that handle lyric processing and analysis for each playlist (more info in part 2).  
             </p>
@@ -115,8 +117,9 @@
             <p>To analyze and visualize each lyric from the songs for each playlist, I used a combination of NLP tools for text preprocessing and ML algorithms for clustering and topic modeling. Song lyrics were sourced from the Lyric Genius API and were split into individual lines. The dataset, consisting of individual lyrics lines along with song titles and artists, were then cleaned and preprocessed –  tokenized into words, converted to lowercase, filtered to remove stopwords and non-alphanumeric tokens, and lemmatized to obtain their base forms. Text processing involved the use of several NLTK package modules including WordNet, stopwords, and Punkt tokenizer. 
             </p>
             <div style = "display: flex; margin-bottom: 1em;">
-                <div style = "width: 30%;">
-                    <img alt = "diagram outlining the different components of the project stack" width = 100% src = "../media/Spotify/diagram.png">
+                <div style = "width: 30%; top: -8px; left: -1%; position: relative;">
+                    <img alt = "diagram outlining the different components of the project stack" width = 100% src = "../media/Spotify/spotify stack flow.png">
+                    <div style = "margin-top: 0.5em !important;" class = "media-caption">[ project stack flow ]</div>
                 </div>
                 <div style = "width: 65%;">
                     <p>The data/text was transformed into Term Frequency-Inverse Document Frequency (TF-IDF) feature vectors using the TfidfVectorizer module from the Scikit-learn library, which numerically represented the importance of each word in the context of the entire corpus. With these feature vectors, I applied K-Means clustering to group the lyric lines into 15 distinct clusters based on their textual similarities. The clustering process involved fitting the K-Means algorithm to the TF-IDF vectors and assigning each lyric line to one of the clusters. Furthermore, I employed Latent Dirichlet Allocation (LDA) for topic modeling, extracting the three top words that characterize each topic. These top words were then used to create identifiers for each cluster. To calculate the precision of the clustering results, I computed cosine similarity scores between each lyric line and the centroid of its assigned cluster, providing a measure of how closely each line matched the central theme of its cluster. Additionally, confidence levels were calculated based on the Euclidean distance to the nearest cluster center, with higher confidence corresponding to shorter distances.
@@ -128,67 +131,68 @@
             </div>
             <div style = "width: 100%; padding-bottom: 0.5em; border-bottom: 0.5px solid black;">Project frontend</div>
             <div class = "project-section" style = "font-style: italic;">Landing Page</div>
-            <div style = "display: flex;">
-                <div style = "width: 70%;">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magnam accusantium sed magni fugiat voluptas minima placeat ipsum similique at delectus et vel repellat tempora facere ullam consequatur animi odio officiis alias sint cupiditate eligendi, amet nemo. Corporis dolorem ipsum vero magnam odit, explicabo qui molestias hic voluptates cupiditate placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magnam accusantium sed magni fugiat voluptas minima placeat ipsum similique at delectus et vel repellat tempora facere ullam consequatur animi odio officiis alias sint cupiditate eligendi, amet nemo. Corporis dolorem ipsum vero magnam odit, explicabo qui molestias hic voluptates cupiditate placeat.</p>
-                    <div class = "project-section" style = "font-style: italic;">Main Page</div>
-                    <div class = "project-subsection" style = "font-style: italic;">A) User Tool Container</div>
-                    <p>The main page is divided into three main components. First is a user interactive [interface] where users can control the [operations/functionalities] of the project/web page: five dials representing each playlist, and two meters [showcasing] the different data visualization [options]. There is also a record player displaying the [album/song image] with song title, album, and artist information displayed at the bottom that changes upon hovering through the song nodes … []. 
-                    </p>
-                </div>
-                 <div style = "width: 30%; margin-left: 2%; margin-bottom: 1%; height: fit-content; background-color: rgba(0,0,0,0.05); min-width: 350px;">
+            <div>
+                <div style = "width: 30%; margin-left: 2%; margin-bottom: 1%; height: fit-content; min-width: 350px; float: right;">
                     <img alt = "" width = "100%" height = "auto" src = "../media/Spotify/landingpage.png">
                     <div class = "media-caption">[ Landing Page ]</div>
                 </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magnam accusantium sed magni fugiat voluptas minima placeat ipsum similique at delectus et vel repellat tempora facere ullam consequatur animi odio officiis alias sint cupiditate eligendi, amet nemo. Corporis dolorem ipsum vero magnam odit, explicabo qui molestias hic voluptates cupiditate placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magnam accusantium sed magni fugiat voluptas minima placeat ipsum similique at delectus et vel repellat tempora facere ullam consequatur animi odio officiis alias sint cupiditate eligendi, amet nemo. Corporis dolorem ipsum vero magnam odit, explicabo qui molestias hic voluptates cupiditate placeat.</p>
+                <div class = "project-section" style = "font-style: italic;">Main Page</div>
+                <div class = "project-subsection" style = "font-style: italic;">A) User Tool Container</div>
+                <p>The main page is divided into three main components. First is a user interactive [interface] where users can control the [operations/functionalities] of the project/web page: five dials representing each playlist, and two meters [showcasing] the different data visualization [options]. There is also a record player displaying the [album/song image] with song title, album, and artist information displayed at the bottom that changes upon hovering through the song nodes … []. 
+                </p>
             </div>
-            <div style = "display: flex;">
-               <div style = "background-color: rgba(0,0,0,0.05); width: 35%; height: 150x; margin-right: 2em;">USER TOOL CONTAINER</div>
-               <div style = "width: 60%;">
-                    <p>[Next], there are two SVG elements made via d3.js that represent the other main components of the page. The main svg takes up the right half of the page, animating song data on a two dimensional scale. Genres are displayed on a grid-like form (see Figure X), popularity, energy, and danceability values are [illustrated by the] node diameter (the higher the value, the bigger the node), the decade attribute is visualized on the horizontal scale, and lastly, a recombine [feature] repositions/resets all the nodes to the center of the SVG. 
-                    </p>
-                    <p>A smaller svg is placed directly underneath the [user interface]. This SVG visualizes the numerical data of popularity, energy, danceability, and decade by positioning the song nodes with respect to their data values on a one dimensional, horizontal axis. The default attribute visualized on the node for both SVGs upon loading the page is popularity. Similarly, when switching around to different playlists, the SVGs are reset to its default configuration. 
-                    </p>
+            <div>
+                <div style = "background-color: rgba(0,0,0,0.05); width: 35%; height: 150px; margin-right: 2em; float: left;">
+                    <img>
+                    <div class = "media-caption">[ user interface ]</div>
                </div>
+                <p>[Next], there are two SVG elements made via d3.js that represent the other main components of the page. The main svg takes up the right half of the page, animating song data on a two dimensional scale. Genres are displayed on a grid-like form (see Figure X), popularity, energy, and danceability values are [illustrated by the] node diameter (the higher the value, the bigger the node), the decade attribute is visualized on the horizontal scale, and lastly, a recombine [feature] repositions/resets all the nodes to the center of the SVG. 
+                </p>
+                <p>A smaller svg is placed directly underneath the [user interface]. This SVG visualizes the numerical data of popularity, energy, danceability, and decade by positioning the song nodes with respect to their data values on a one dimensional, horizontal axis. The default attribute visualized on the node for both SVGs upon loading the page is popularity. Similarly, when switching around to different playlists, the SVGs are reset to its default configuration. 
+                </p>
             </div>
             <div class = "project-section" style = "font-style: italic;">B) Main svg.+ Little svg (bubble_chart.js + Little_chart.js)</div>
             <div class = "project-subsection" style = "font-style: italic;">Main svg</div>
-            <div style = "display: flex;">
-                <div style = "width: 70%;">
-                    <p>The functionality of the main svg is [driven? Action verb here BLANK] by [FUNCTION NAME (create_bubbles)] function defined in the ‘bubble_chart.js’ script. This function is called in the main.js that passes the [song data from the current active playlist] as the parameter to create interactive visualizations and animations. [Overall], the function dynamically generates a bubble chart visualization where each circle node represents a song, utilizing D3.js for data binding, scales, forces, and interactivity to provide an engaging exploration of the designated playlist’s song dataset.</p>
-                    <p>Firstly, it selects the main SVG element and clears any existing content within the SVG to reset for each playlist. Then, circle elements representing songs are appended to the SVG, each with its own radius and fill pattern based on the track popularity and image. Drag behavior is implemented for interactivity, allowing circles to be dragged smoothly. A force simulation (simulation) is set up with various forces like charge, centering, and collision detection. Tooltip functionality is added for mouseover events on circles to display song details that are displayed on the [user interface]. 
-                    </p>
-                    <p>Buttons [click conditions] for genre, decade, combine, energy, popularity, and danceability from the main page are defined for user interaction, triggering changes in circle positions and sizes based on selected criteria. For positioning circles by genre and decade, the function sets up scales and forces [that would be triggered] upon clicking the genre and decade button, respectively. It creates new [arrays/MAPS?/key-value objects?] to store distinct genres and decades present in the parameter dataset. Then, maps are created for both genre and decade to extract and [pair?] its information for each song in the dataset. The function takes  the dimensions of the svg, generates numeral positionings, and uses D3 forces simulations to evenly distribute the circle nodes based on the data and appropriate scale based on the size of the svg. Genre configuration creates an [even] grid based on the # of distinct genres represented in the dataset… Decade configuration is distributing BLANK horizontally based on the # of distinct decades represented in the dataset…</p>
+            <div>
+                <div style = "width: 30%; height: fit-content; margin-left: 2%; margin-bottom: 1%; float: right;">
+                    <img style = "width: 100%; height: 300px;">
+                    <div class = "media-caption">[ main SVG ]</div>
                 </div>
-                <div style = "width: 30%; margin-left: 2%; margin-bottom: 1%; background-color: rgba(0,0,0,0.05);"></div>
+                <p>The functionality of the main svg is [driven? Action verb here BLANK] by [FUNCTION NAME (create_bubbles)] function defined in the ‘bubble_chart.js’ script. This function is called in the main.js that passes the [song data from the current active playlist] as the parameter to create interactive visualizations and animations. [Overall], the function dynamically generates a bubble chart visualization where each circle node represents a song, utilizing D3.js for data binding, scales, forces, and interactivity to provide an engaging exploration of the designated playlist’s song dataset.</p>
+                <p>Firstly, it selects the main SVG element and clears any existing content within the SVG to reset for each playlist. Then, circle elements representing songs are appended to the SVG, each with its own radius and fill pattern based on the track popularity and image. Drag behavior is implemented for interactivity, allowing circles to be dragged smoothly. A force simulation (simulation) is set up with various forces like charge, centering, and collision detection. Tooltip functionality is added for mouseover events on circles to display song details that are displayed on the [user interface]. 
+                </p>
+                <p>Buttons [click conditions] for genre, decade, combine, energy, popularity, and danceability from the main page are defined for user interaction, triggering changes in circle positions and sizes based on selected criteria. For positioning circles by genre and decade, the function sets up scales and forces [that would be triggered] upon clicking the genre and decade button, respectively. It creates new [arrays/MAPS?/key-value objects?] to store distinct genres and decades present in the parameter dataset. Then, maps are created for both genre and decade to extract and [pair?] its information for each song in the dataset. The function takes  the dimensions of the svg, generates numeral positionings, and uses D3 forces simulations to evenly distribute the circle nodes based on the data and appropriate scale based on the size of the svg. Genre configuration creates an [even] grid based on the # of distinct genres represented in the dataset… Decade configuration is distributing BLANK horizontally based on the # of distinct decades represented in the dataset…</p>
             </div>
             <p>For energy, popularity, and danceability button animations, the song circle’s radius changes with respect to the [numerical data] represented by each song. The function defines helper functions to calculate the minimum and maximum radius range based on the [width OF WHAT and number of tracks]. It sets up radiusScale and [what is this → ] trackdetailsScale scales using d3.scaleSqrt() to map data values to circle radii. The ‘combine button’ utilizes both X and Y forces to bring the circles to the center of the svg. The forceCollide D3 [function/method] is implemented to ensure that circles do not overlap.
             </p>
             <div class = "project-subsection" style = "font-style: italic;">Little svg</div>
             <p>The [generatePlot()] JavaScript function that [SMTH SMTH for the smaller SVG] also operates on song data and utilizes D3.js to create a visualization, but with a different approach compared to [create_bubbles()]. Overall, [generatePlot()] dynamically generates a [horizontal] scatter plot visualization of songs, allowing users to explore the dataset based on different attributes, with interactive features powered by D3.js.
             </p>
-            <div style = "display: flex;">
-                <div style = "width: 65%;">
-                    <p>The initialization of the [smaller SVG] begins the same as the [bigger SVG]: by selecting the SVG element #little-svg and clears any existing content within the SVG. Drag behavior functions are defined to enable dragging of elements within the visualization. Circle elements representing songs are appended to the SVG using data binding. Each circle is filled with a pattern based on the track image and positioned along the x-axis at the center of the SVG. [MENTION THE SCALE W/ TICKS] Circles are positioned along the x-axis using a force simulation (alignX) to create a scatter plot effect.
-                    </p>
-                    <p>As the default [positioning], An [x-axis scale and axis] are [set up] based on the popularity value in the dataset. Similarly, the function also sets up event listeners for buttons decade, energy, and danceability to change the [x-axis] scale and reposition circles based on different criteria such as release song release year, popularity, energy, and danceability, respectively. Each button click triggers a transition to update the visualization accordingly. Tooltip functionality is added for mouseover events on circles to display song details.
-                    </p>
+            <div>
+                <div style = "width: 40%; margin-left: 2%; margin-bottom: 1%; float: right;">
+                    <img style = "width: 100%; height: 125px;">
+                    <div class = "media-caption">[ Little SVG ]</div>
                 </div>
-                <div style = "width: 35%; margin-left: 2%; margin-bottom: 1%; background-color: rgba(0,0,0,0.05);"></div>
+                <p>The initialization of the [smaller SVG] begins the same as the [bigger SVG]: by selecting the SVG element #little-svg and clears any existing content within the SVG. Drag behavior functions are defined to enable dragging of elements within the visualization. Circle elements representing songs are appended to the SVG using data binding. Each circle is filled with a pattern based on the track image and positioned along the x-axis at the center of the SVG. [MENTION THE SCALE W/ TICKS] Circles are positioned along the x-axis using a force simulation (alignX) to create a scatter plot effect.
+                </p>
+                <p>As the default [positioning], An [x-axis scale and axis] are [set up] based on the popularity value in the dataset. Similarly, the function also sets up event listeners for buttons decade, energy, and danceability to change the [x-axis] scale and reposition circles based on different criteria such as release song release year, popularity, energy, and danceability, respectively. Each button click triggers a transition to update the visualization accordingly. Tooltip functionality is added for mouseover events on circles to display song details.
+                </p>
             </div>
             <div class = "project-section" style = "font-style: italic;">Lyric analysis plot and dynamic tooltip/info display (Lyric_plot_test.js) 
             </div>
-            <div style = "display: flex;">
-                <div style = "width: 30%; margin-right: 2%; margin-bottom: 1%; background-color: rgba(0,0,0,0.05);"></div>
-                <div style = "width: 70%;">
-                    <p>The CSV file contained the processed lyrics data, x and y coordinates, cluster assignments, sentences, song titles, artists, cosine similarity scores, and confidence levels. This information was used to visualize the lyric lines in an interactive plot. 
-                    </p>
-                    <p>The main scatterplot SVG was created to plot the data, and scales for axes were defined based on the minimum and maximum x and y values of data. Scatterplot circles representing lyric points were drawn using D3, plotted according to their x and y coordinates, and color-coded based on the cluster type the lyric represents. Drag behavior was implemented to make the circles draggable, enhancing interactivity. A force simulation was created to apply forces on the lyric circles for collision detection and positioning, ensuring they don't overlap.
-                    </p>
-                    <p>A tooltip was added to display details of each lyric point on the plot upon hovering, showing lyric sentence, cluster, song title, artist, cosine similarity score, and confidence level. The tooltip contains a doughnut chart made using chart.js representing cluster distribution, with each unique cluster color coded via a custom generated color scheme. I also added horizontal meters to depict the x, y, and confidence level values (measuring the distance to the nearest cluster centroid), a circular progress bar for cosine similarity score (measuring how close each lyric is to its assigned cluster), and an area chart created through chart.js that graphs all x and y coordinates lyric data points for the chosen song. 
-                    </p>
-                    <p>[Overall, the code dynamically generates a scatterplot visualization where each circle represents a lyric line from songs. It leverages various D3.js features for data binding, DOM manipulation, tooltip creation, drag behavior, force simulation, zooming, and chart creation, providing an interactive interface for exploring and analyzing the song lyrics data in detail.]
-                    </p>
+            <div>
+                <div style = "width: 40%; height: 300px; margin-right: 2%; margin-bottom: 1%; background-color: rgba(0,0,0,0.05); float: left;">
+                    <div class = "media-caption">[ lyrics plot ]</div>
                 </div>
+                <p>The CSV file contained the processed lyrics data, x and y coordinates, cluster assignments, sentences, song titles, artists, cosine similarity scores, and confidence levels. This information was used to visualize the lyric lines in an interactive plot. 
+                </p>
+                <p>The main scatterplot SVG was created to plot the data, and scales for axes were defined based on the minimum and maximum x and y values of data. Scatterplot circles representing lyric points were drawn using D3, plotted according to their x and y coordinates, and color-coded based on the cluster type the lyric represents. Drag behavior was implemented to make the circles draggable, enhancing interactivity. A force simulation was created to apply forces on the lyric circles for collision detection and positioning, ensuring they don't overlap.
+                </p>
+                <p>A tooltip was added to display details of each lyric point on the plot upon hovering, showing lyric sentence, cluster, song title, artist, cosine similarity score, and confidence level. The tooltip contains a doughnut chart made using chart.js representing cluster distribution, with each unique cluster color coded via a custom generated color scheme. I also added horizontal meters to depict the x, y, and confidence level values (measuring the distance to the nearest cluster centroid), a circular progress bar for cosine similarity score (measuring how close each lyric is to its assigned cluster), and an area chart created through chart.js that graphs all x and y coordinates lyric data points for the chosen song. 
+                </p>
+                <p>[Overall, the code dynamically generates a scatterplot visualization where each circle represents a lyric line from songs. It leverages various D3.js features for data binding, DOM manipulation, tooltip creation, drag behavior, force simulation, zooming, and chart creation, providing an interactive interface for exploring and analyzing the song lyrics data in detail.]
+                </p>
             </div>
             <div style = "margin-bottom: 2em;">Concluding Paragraph: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda veniam labore culpa! Iure temporibus dicta doloremque perspiciatis, eius excepturi ipsam facere molestiae placeat, cumque deleniti laboriosam itaque culpa natus laudantium in, sit ex libero esse tempora? Culpa magnam quidem laborum minima accusamus natus earum aspernatur maxime, fugiat dolorem reiciendis beatae placeat repellendus et voluptate assumenda? Sed dignissimos eligendi porro, est repellendus veritatis aut in, reiciendis atque animi ipsam quae cum?</div>
         </div>

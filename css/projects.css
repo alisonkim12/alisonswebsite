@@ -55,6 +55,7 @@
     line-height: 1.3em;
     padding-bottom: 0.3em;
     width: fit-content;
+    margin: 0 auto;
 }
 
 .project-details{
