@@ -91,7 +91,10 @@
             </div>
             <div>
                 <div style = "width: 60%; margin-left: 2%; margin-bottom: 1%; float: right;">
-                    <img style = "width: 100%;" src = "../media/Spotify/landingpage.png">
+                    <video style = "width: 100%;" autoplay loop muted>
+                        <source src="../media/Spotify/mainPage.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class = "media-caption">[ main page ]</div>
                 </div>
                 <p>The main backend script (main.py) utilizing the Spotify API and Flask, allows querying Spotify playlists and processing track information. The script starts by importing necessary libraries: `requests` and `urllib.parse` for handling HTTP requests and URL parsing, `urllib.error` for HTTP error handling, `requests.adapters.HTTPAdapter` and `urllib3.util.retry.Retry` for configuring request retries, `time` for delays, `json` for JSON operations, `ssl` for SSL configurations, `datetime` for date and time operations, and Flask components for web server functionality. 
@@ -133,7 +136,10 @@
             <div class = "project-section" style = "font-style: italic;">Landing Page</div>
             <div>
                 <div style = "width: 30%; margin-left: 2%; margin-bottom: 1%; height: fit-content; min-width: 350px; float: right;">
-                    <img alt = "" width = "100%" height = "auto" src = "../media/Spotify/landingpage.png">
+                    <video style = "width: 100%;" autoplay loop muted>
+                        <source src="../media/Spotify/landingPage.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class = "media-caption">[ Landing Page ]</div>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magnam accusantium sed magni fugiat voluptas minima placeat ipsum similique at delectus et vel repellat tempora facere ullam consequatur animi odio officiis alias sint cupiditate eligendi, amet nemo. Corporis dolorem ipsum vero magnam odit, explicabo qui molestias hic voluptates cupiditate placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magnam accusantium sed magni fugiat voluptas minima placeat ipsum similique at delectus et vel repellat tempora facere ullam consequatur animi odio officiis alias sint cupiditate eligendi, amet nemo. Corporis dolorem ipsum vero magnam odit, explicabo qui molestias hic voluptates cupiditate placeat.</p>
@@ -144,8 +150,11 @@
             </div>
             <div>
                 <div style = "background-color: rgba(0,0,0,0.05); width: 35%; height: 150px; margin-right: 2em; float: left;">
-                    <img>
-                    <div class = "media-caption">[ user interface ]</div>
+                    <video style = "width: 100%;" autoplay loop muted>
+                        <source src="../media/Spotify/userInterface.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div style = 'margin-bottom: 1em;' class = "media-caption">[ user interface ]</div>
                </div>
                 <p>[Next], there are two SVG elements made via d3.js that represent the other main components of the page. The main svg takes up the right half of the page, animating song data on a two dimensional scale. Genres are displayed on a grid-like form (see Figure X), popularity, energy, and danceability values are [illustrated by the] node diameter (the higher the value, the bigger the node), the decade attribute is visualized on the horizontal scale, and lastly, a recombine [feature] repositions/resets all the nodes to the center of the SVG. 
                 </p>
@@ -156,7 +165,10 @@
             <div class = "project-subsection" style = "font-style: italic;">Main svg</div>
             <div>
                 <div style = "width: 30%; height: fit-content; margin-left: 2%; margin-bottom: 1%; float: right;">
-                    <img style = "width: 100%; height: 300px;">
+                    <video style = "width: 100%;" autoplay loop muted>
+                        <source src="../media/Spotify/mainSVG.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class = "media-caption">[ main SVG ]</div>
                 </div>
                 <p>The functionality of the main svg is [driven? Action verb here BLANK] by [FUNCTION NAME (create_bubbles)] function defined in the ‘bubble_chart.js’ script. This function is called in the main.js that passes the [song data from the current active playlist] as the parameter to create interactive visualizations and animations. [Overall], the function dynamically generates a bubble chart visualization where each circle node represents a song, utilizing D3.js for data binding, scales, forces, and interactivity to provide an engaging exploration of the designated playlist’s song dataset.</p>
@@ -171,7 +183,10 @@
             </p>
             <div>
                 <div style = "width: 40%; margin-left: 2%; margin-bottom: 1%; float: right;">
-                    <img style = "width: 100%; height: 125px;">
+                    <video style = "width: 100%;" autoplay loop muted>
+                        <source src="../media/Spotify/littleSVG.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class = "media-caption">[ Little SVG ]</div>
                 </div>
                 <p>The initialization of the [smaller SVG] begins the same as the [bigger SVG]: by selecting the SVG element #little-svg and clears any existing content within the SVG. Drag behavior functions are defined to enable dragging of elements within the visualization. Circle elements representing songs are appended to the SVG using data binding. Each circle is filled with a pattern based on the track image and positioned along the x-axis at the center of the SVG. [MENTION THE SCALE W/ TICKS] Circles are positioned along the x-axis using a force simulation (alignX) to create a scatter plot effect.
