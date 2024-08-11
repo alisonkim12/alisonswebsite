@@ -1,14 +1,14 @@
 const indexData = [
-  { year: 2024, project: 'Nature Cam', description: "for the times you want to open up a website and what some critters are up to", tools: 'node.js, Google Geocoding API, maptiler, spaCy, Youtube Data API'},
-  { year: 2024, project: 'Trail of Prayers', description: 'computer + my need to make something beautiful = ', tools: 'Flask, UMAP, NumPy, GloVe, scikit-learn' },
-  { year: 2024, project: 'Angel of history', description: 'an interactive metaphor for that one famous Walter Benjamin quote', tools: 'matter.js, ml5.js, news API'},
-  { year: 2023, project: 'play (with) music', description: 'my first experimentation with d3.js', tools: 'Spotify API, d3.js, NLTK, scikit-learn, jQuery' },
-  { year: 2023, project: 'Requiem for a Friend', description: 'an ode to two things I miss from my school', tools: 'javascript' },
-  { year: 2023, project: 'Restructuring pedagogical norms in STEM: Towards a socially and ethically conscious approach to Computer Science education', description: 'my undergraduate thesis' },
-  { year: 2022, project: 'Swarthmore Marketplace', description: "a full-stack project emulating 'Facebook Marketplace'", tools : 'Flask, Firebase, CSS, HTML'},
-  { year: 2021, project: 'CS16: Critical Theory of Technology', description: 'a student led course I co-taught in my CS department about historial, decolonial, queer, feminist, race, and disability centered inquiries into technology' },
-  { year: 2021, project: 'resource guides for undocumented students', description: 'a series of community-based efforts to increase education access to undocumented students and organizing for immigrant rights', tools: 'Canva' },
-  { year: 2020, project: 'CS Computer Lab energy project', description: "an energy management system for Swarthmore College's computer labs", tools: 'Python, Scapy, subprocess, ssh, Grafana, Z Wave' },
+  { year: 2024, project: 'Nature Cam', description: "for the times you want to open up a website and what some critters are up to", tools: 'node.js, Google Geocoding API, maptiler, spaCy, Youtube Data API', link: 'nature-cam'},
+  { year: 2024, project: 'Trail of Prayers', description: 'computer + my need to make something beautiful = ', tools: 'Flask, UMAP, NumPy, GloVe, scikit-learn' , link: 'trail-of-prayers'},
+  { year: 2024, project: 'Angel of history', description: 'an interactive metaphor for that one famous Walter Benjamin quote', tools: 'matter.js, ml5.js, news API', link: 'angel-of-history'},
+  { year: 2023, project: 'play (with) music', description: 'my first experimentation with d3.js', tools: 'Spotify API, d3.js, NLTK, scikit-learn, jQuery', link: 'play-with-music' },
+  { year: 2023, project: 'Requiem for a Friend', description: 'an ode to two things I miss from my school', tools: 'javascript', link: 'requiem' },
+  { year: 2023, project: 'Restructuring pedagogical norms in STEM: Towards a socially and ethically conscious approach to Computer Science education', description: 'my undergraduate thesis', link: 'thesis'},
+  { year: 2022, project: 'Swarthmore Marketplace', description: "a full-stack project emulating 'Facebook Marketplace'", tools : 'Flask, Firebase, CSS, HTML', link: 'swarthmore-marketplace'},
+  { year: 2021, project: 'CS16: Critical Theory of Technology', description: 'a student led course I co-taught in my CS department about historial, decolonial, queer, feminist, race, and disability centered inquiries into technology', link: 'CS16'},
+  { year: 2021, project: 'resource guides for undocumented students', description: 'a series of community-based efforts to increase education access to undocumented students and organizing for immigrant rights', tools: 'Canva', link: 'undocumented-resources' },
+  { year: 2020, project: 'CS Computer Lab energy project', description: "an energy management system for Swarthmore College's computer labs", tools: 'Python, Scapy, subprocess, ssh, Grafana, Z Wave', link: 'undocumented-resources'},
 ];
 
 function createIndexGrid(){
@@ -21,7 +21,7 @@ function createIndexGrid(){
     projectTitle.className = 'project-title';
     const projectLink = document.createElement('a'); 
     projectLink.className = 'project-links'
-    projectLink.href = `projects/project-${index+1}.html`; // disable for testing 
+    projectLink.href = `projects/project-${index+1}.html`; 
     projectLink.innerHTML = item['project'];
     projectTitle.appendChild(projectLink);
 
@@ -76,7 +76,7 @@ function createIndexList() {
     projectName.className  = 'project-name';
     const projectLink = document.createElement('a'); 
     projectLink.className = 'project-links'
-    projectLink.href = `projects/project-${index+1}.html`; // disable for testing 
+    projectLink.href = `projects/${item['link']}`;
     projectLink.innerHTML = item['project'];
     projectName.appendChild(projectLink);
 

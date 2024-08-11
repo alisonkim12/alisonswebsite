@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/basier" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=DM+Mono:wght@300&family=Bungee+Hairline&family=Sono:wght@300&family=Telex&family=Commissioner:wght@300&family=Creepster&family=Nabla&family=Foldit&family=Codystar&family=Libre+Barcode+39+Extended+Text&family=Bungee+Hairline&family=Fontdiner+Swanky&family=Mrs+Saint+Delafield&family=UnifrakturMaguntia&family=Sigmar+One&family=Reenie+Beanie&family=Lora&family=Ewert&family=Dr+Sugiyama&family=Gruppo&family=Marhey&family=Mountains+of+Christmas&family=Moirai+One&family=Moo+Lah+Lah&family=Mynerve&family=Rubik+Glitch&family=Rubik+Burned&family=Rubik+Lines&family=Satisfy&family=Barrio&family=Silkscreen&family=Special+Elite&family=Zeyada&display=swap" rel="stylesheet">        
+    <!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="style_mobile.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/009/266/750/non_2x/sun-icon-design-free-png.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/project-7.css">
+    <script src="https://kit.fontawesome.com/7ed75dc688.js" crossorigin="anonymous"></script>
+    <script src="https://worldtimeapi.org/api/timezone/America/Los_Angeles"></script>
+    <script src = "../js/right-banner.js"></script>
+    <title>alisons⭒computer</title> 
+</head>
+<body>
+    <section>
+        <nav id = "nav-bar" class="banner">
+            <div class="left-header">
+                <a style = "text-decoration: none;" href = "/index.html" class = "title">
+                    <span>alisons</span>
+                    <span id = "computer">computer</span>
+                </a>
+            </div>
+            <div id = "sub-title"></div>
+            <div class = "right-header">
+                <span id = "line-1">It is <span id = "local-time"></span><i id = "day-or-night" class="fa-solid fa-cloud-sun"></i></span>
+                <span id = "line-2"><i class="ri-calendar-event-fill"></i> <span id = "day-of-week"></span><span id = "full-date"></span></span>
+                <span id = "line-3"><span id = "temperature"></span> & <span id = "weather"></span><img id = 'weather-icon' class = "icon-here"></img></span>
+            </div>
+        </nav>
+    </section>
+    <section id = "section-project-page">
+        <div class="page-buttons">
+            <span id = "link-home"><a href = "../index.html"><i class="ri-arrow-left-up-line"></i> back to main page</a></span>
+            <span id = "link-next-project"><a href = "./project-8.html">CS16: Critical Theory of Technology <i class="ri-arrow-right-up-line"></i></a></span>
+        </div>
+        <div class="project-header">
+            <div id="project-title">Swarthmore Marketplace</div>
+            <div class = "project-details">
+                <span id="project-year">2022</span><span id="project-tools">Flask, Firebase, Python, HTML, CSS, Javascript</span>
+                <div id="project-link">
+                    <a href = "">project link <i class="ri-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <div id="page-body">
+            <div id="description-header">
+                <p>for CS075 Software Engineering with Amy Cho, Andy Wu, and Diego Hernandez Monsivais</p>
+            </div>
+            <div id="description-body">
+                <p>Swarthmore Marketplace arose in an effort to increase the accessibility of selling, donating, and purchasing used items outside of the designated space of Worthmore, the student-run donation center at the basement of Willets Hall. In order to incentivize continuous efforts in reusing and recycling, a digital platform could streamline this process increasing both reach and convenience.</p>
+                <p>Swarthmore Marketplace is a full stack application with register/login/logout, email verification, post adding/editing/deleting features, supporting a scalable and secure marketplace platform.</p>
+                <p style = "font-style: italic; border-bottom: 0.5px solid black; width: 100%;">Project Frontend</p>
+                <div>
+                    <div style = "float: right;" class="media-container" id="container-1">
+                        <div class = "videos">
+                            <video id = "register" autoplay loop muted>
+                                <source src="../media/marketplace/CleanShot 2024-04-11 at 19.51.01.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <video id = "signin" autoplay loop muted>
+                                <source src="../media/marketplace/CleanShot 2024-04-11 at 19.52.57.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class = "media-caption">[registering + logging in]</div>
+                    </div>
+                    <p>The website comprises five HTML and CSS pages, each serving a distinct purpose: 1) account creation, 2) user login, 3) viewing all postings (main page), 4) creating and publishing a posting, and 5) viewing user account information and postings.
+                    </p>
+                    <p>The application frontend defines several functions that interact with a web server using XMLHttpRequest to dynamically update the content of the webpage. Each function is designed to interact with specific API endpoints, update the DOM dynamically, and handle asynchronous HTTP requests to provide a responsive user experience; the use of XMLHttpRequest ensures compatibility with older browsers. 
+                    </p>
+                    <p>These functions retrieve and manipulate user and post data. For instance, when a user logs into their account, a function initializes an `XMLHttpRequest`, updating the "name" and "email" elements with the user's details, and the "mobile" element if a number is present. It then sends a GET request to "/api/user" and returns the `xhttp` object. When a user creates a posting, it sends a GET request to "/api/posts'', and returns the `xhttp` object. It also updates the home page of all user’s posts as well as the index page of user’s individual posts by creating `XMLHttpRequest` with JSON response type, logging the response, and dynamically creating and appending HTML card elements for each post to the "cards'' element, adding navigation `onclick` events for the home page, and adding delete buttons for the user’s account page that trigger a specific function deleting the user’s post. This function creates an `XMLHttpRequest` object, checks for a successful response, logs a success message, and hides the deleted post's element, sending a DELETE request to the appropriate endpoint and returning the `xhttp` object. 
+                    </p>
+                    <p>By leveraging XMLHttpRequest, the application ensures broad browser compatibility while maintaining efficient and dynamic content update, ensuring a responsive and intuitive interface for managing user accounts and postings.
+                    </p>
+                </div>
+                <p style = "font-style: italic; border-bottom: 0.5px solid black; width: 100%;">Project Backend</p>
+                <div>
+                    <div style = "float: left;" class="media-container" id="container-2">
+                        <div class = "videos">
+                            <video id = "create-post" autoplay loop muted>
+                                <source src="../media/marketplace/CleanShot 2024-04-13 at 15.14.42.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class = "media-caption">[creating a post]</div>
+                    </div>
+                    <p>The application backend ensures secure user authentication, session management, and dynamic content serving, with robust Firebase interactions for data synchronization and storage. It uses the Flask framework, integrating Firebase for authentication, database, and storage services. It begins with imports of necessary modules including `Flask` components (`flash`, `abort`, `session`, `render_template`, `request`, `redirect`, `send_from_directory`, `url_for`), `secure_filename` from `werkzeug.utils`, `pyrebase` for Firebase interaction, `os` for OS functionalities, `requests` for HTTP requests, and `datetime` for date and time manipulation. Firebase was configured with a dictionary containing API keys and URLs. Firebase services for authentication, database, and storage were set up, the current working directory was retrieved, and a secret key for session management was set. 
+                    </p>
+                    <p>Content-serving routes include the main page, navigation bar, profile page, individual post view, and item posting page. A function for posting items handles `POST` requests to retrieve user info, store item images in Firebase storage, and save posting data to the Firebase database. API routes were made for retrieving logged-in user information, fetching all postings, retrieving postings by the logged-in user, fetching specific post details, and deleting a post if the logged-in user is the owner.
+                    </p>
+                </div>
+                <div>
+                    <div style = "float: right;" class="media-container" id="container-3">
+                        <div class = "videos">
+                            <video id = "delete-post" autoplay loop muted>
+                                <source src="../media/marketplace/CleanShot 2024-04-13 at 15.26.05.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class = "media-caption">[deleting a post]</div>
+                    </div>
+                    <p>A `before_request` function was made as middleware to check user session status, redirecting unauthenticated users to the login page except for specific paths (`/login` and `/register`). The `login` route handles `GET` and `POST` requests; it redirects logged-in users to the main page, attempts user login with provided credentials, and handles email verification. If successful, the user is added to the session and redirected to the main page; otherwise, the login page is re-rendered. The `register` route handles user registration, verifying whether the email domains is ‘@swarthmore.edu’, registering users with Firebase, sending email verifications to complete the registration process, and saving user data to Firebase database before redirecting to the login page or returning error messages. The `logout` route clears the user session and redirects to the login page. Content-serving routes include the main page (`/`), navigation bar (`/navbar`), profile page (`/profile`), individual post view (`/posts/id`), and item posting page (`/postItem`). The `postItem` route handles `POST` requests to retrieve user info, store item images in Firebase storage, and save posting data to the Firebase database. API routes are made for retrieving logged-in user information, fetching all postings, retrieving postings by the logged-in user, fetching specific post details, and deleting a post if the logged-in user is the owner. The comprehensive set of routes and functions forms the backbone of a responsive and dynamic web application. 
+                    </p>
+                    <p>By integrating Flask with Firebase, the application benefits from authentication, data synchronization, and secure storage solutions. This framework ensures data integrity and security but also supports a scalable infrastructure capable of adapting to future enhancements and growing user demands. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src = "../js/left-banner.js"></script>
+    <script>
+        // const loginVideo = document.getElementById('login-video');
+        // loginVideo.addEventListener('mouseenter', () => {
+        //     loginVideo.src = '../media/marketplace/CleanShot 2024-04-11 at 19.52.57.mp4';
+        //     loginVideo.play();
+        //     // loginVideo.style.opacity = 0;
+        //     // setTimeout(() => {
+        //     //     loginVideo.src = '../media/marketplace/CleanShot 2024-04-11 at 19.52.57.mp4';
+        //     //     loginVideo.play();
+        //     //     loginVideo.style.opacity = 1;
+        //     // }, 500); // Adjust the delay as needed to
+           
+        // });
+        // loginVideo.addEventListener('mouseleave', () => {
+        //     loginVideo.src = '../media/marketplace/CleanShot 2024-04-11 at 19.51.01.mp4';
+        //     loginVideo.play();
+        //     // loginVideo.style.opacity = 0;
+        //     // setTimeout(() => {
+        //     //     loginVideo.src = '../media/marketplace/CleanShot 2024-04-11 at 19.51.01.mp4';
+        //     //     loginVideo.play();
+        //     //     loginVideo.style.opacity = 1;
+        //     // }, 500); // Adjust the delay as needed to
+        // });
+    </script>
+</body>
+</html>
+
+
+

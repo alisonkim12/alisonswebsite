@@ -1,0 +1,171 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/basier" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=DM+Mono:wght@300&family=Bungee+Hairline&family=Sono:wght@300&family=Telex&family=Commissioner:wght@300&family=Creepster&family=Nabla&family=Foldit&family=Codystar&family=Libre+Barcode+39+Extended+Text&family=Bungee+Hairline&family=Fontdiner+Swanky&family=Mrs+Saint+Delafield&family=UnifrakturMaguntia&family=Sigmar+One&family=Reenie+Beanie&family=Lora&family=Ewert&family=Dr+Sugiyama&family=Gruppo&family=Marhey&family=Mountains+of+Christmas&family=Moirai+One&family=Moo+Lah+Lah&family=Mynerve&family=Rubik+Glitch&family=Rubik+Burned&family=Rubik+Lines&family=Satisfy&family=Barrio&family=Silkscreen&family=Special+Elite&family=Zeyada&display=swap" rel="stylesheet">        
+    <!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="style_mobile.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/009/266/750/non_2x/sun-icon-design-free-png.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <script src="https://kit.fontawesome.com/7ed75dc688.js" crossorigin="anonymous"></script>
+    <script src="https://worldtimeapi.org/api/timezone/America/Los_Angeles"></script>
+    <script src = "../js/right-banner.js"></script>
+    <title>alisons⭒computer</title> 
+</head>
+<style>
+    #description-body{
+        font-family: "Commissioner", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 1em;
+        font-size: 0.8em;
+    }
+    
+    #description-header{ 
+        font-style: italic; 
+        font-size: 1em; 
+        color: rgba(0,0,0,0.6);
+        
+    }
+    .media-caption{
+        font-family: "Sono", monospace;
+        font-size: 0.8em;
+        margin: 1em auto;
+        width: fit-content;
+    }
+    div p{
+        margin-bottom: 1em;
+        font-size: 0.9em;
+    }
+
+    .project-section{
+        font-size: 0.9em;
+        margin: 1em 0em;
+    }
+
+    /* .project-subsection{
+        font-size: 1em;
+        margin: 1em 0em;
+
+    } */
+</style>
+<body>
+    <section>
+        <nav id = "nav-bar" class="banner">
+            <div class="left-header">
+                <a style = "text-decoration: none;" href = "/index.html" class = "title">
+                    <span>alisons</span>
+                    <span id = "computer">computer</span>
+                </a>
+            </div>
+            <div id = "sub-title"></div>
+            <div class = "right-header">
+                <span id = "line-1">It is <span id = "local-time"></span><i id = "day-or-night" class="fa-solid fa-cloud-sun"></i></span>
+                <span id = "line-2"><i class="ri-calendar-event-fill"></i> <span id = "day-of-week"></span><span id = "full-date"></span></span>
+                <span id = "line-3"><span id = "temperature"></span> & <span id = "weather"></span><img id = 'weather-icon' class = "icon-here"></img></span>
+            </div>
+        </nav>
+    </section>
+    <section id = "section-project-page">
+        <div class="page-buttons">
+            <span id = "link-home"><a href = "../index.html"><i class="ri-arrow-left-up-line"></i> back to main page</a></span>
+            <span id = "link-next-project"><a href = "./project-2.html">Trail of Prayers <i class="ri-arrow-right-up-line"></i></a></span>
+        </div>
+        <div class="project-header">
+            <div id="project-title">Nature Cam</div>
+            <div class = "project-details">
+                <span id="project-year">2024</span><span id="project-tools">node.js, Google Geocoding API, maptiler, spaCy, Youtube Data API</span>
+                <div id="project-link">
+                    <a href = "" target="_blank">website <i class="ri-link"></i></a>, 
+                    <a href = "https://github.com/alisonkim12/Nature-Cam" target="_blank">github repo <i class="ri-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <div id="project-description">
+            <div id="description-body">
+                <div id="description-header">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint veniam reiciendis itaque incidunt esse, velit id distinctio perferendis beatae repudiandae obcaecati temporibus, enim, cum quod harum et quibusdam? Harum ullam illo mollitia nam dicta, odio maiores tenetur illum doloribus quibusdam soluta accusantium magnam unde voluptatum voluptatibus dolorum aliquid minus minima?</p>
+                </div>
+                <div style = "width: 100%; padding-bottom: 0.5em; border-bottom: 0.5px solid black;">Project backend</div>
+                <div>
+                    <div style = "width: 25%; margin-left: 2em; float: right;">
+                        <img alt = "diagram of the project stack" style = "width: 100%;" src = "../media/nature_cam/nature cam stack flow.png">
+                        <div class = "media-caption">[ project stack flow ]</div>
+                    </div>
+                </div>
+                <div class = "project-section" style = "font-style: italic;">Webpack.config.cjs</div>
+                <p>A `webpack.config.cjs` file is a configuration file for Webpack, a popular module bundler for JavaScript applications. It defines how Webpack should process and bundle the project's assets, such as JavaScript files, stylesheets, and images. The file uses the CommonJS module syntax, as indicated by the `.cjs` extension. The configuration begins with importing necessary modules: `path` for file path manipulation, `HtmlWebpackPlugin` to generate an HTML file and handle HTML assets, `NodePolyfillPlugin` to polyfill Node.js core modules for browser environments, and `webpack` for access to Webpack's built-in plugins and utilities. The `entry` point is set to `./public/js/get-cams.js`, specifying the main JavaScript file for Webpack to start from. The `output` configuration defines the output directory as `public`, the output bundle name as `bundle.js`, and the `publicPath` as `/`.
+                </p>
+                <p>The `module` rules specify how different types of files should be processed. JavaScript files are processed using `babel-loader`, which transpiles ES6+ code to ES5 using the `@babel/preset-env` preset and `@babel/plugin-transform-runtime` plugin, while excluding the `node_modules` directory. Node files with the `.node` extension are processed using `node-loader`, and TypeScript definition files with the `.d.ts` extension are ignored using `ignore-loader`. The `resolve` configuration specifies file extensions Webpack should resolve and directories to search when resolving modules, with fallbacks provided for Node.js core modules to make them work in the browser.
+                </p>
+                <p>Plugins extend Webpack's functionality, with `HtmlWebpackPlugin` generating an HTML file based on a template and injecting the output bundle at the end of the body tag, `IgnorePlugin` ignoring the `worker_threads` module, and `NodePolyfillPlugin` providing polyfills for Node.js core modules in browser environments. Finally, the `mode` is set to `development`, optimizing the build for development by enabling features like source maps and more detailed error messages.
+                </p>
+                <div class = "project-section" style = "font-style: italic;">index.js</div>
+                <p>The `index.js` file serves as the entry point for a Node.js application, orchestrating the setup and configuration of the server, middleware, and Redis client, as well as handling routing and communication with a Python script. This script begins by requiring `core-js/stable` and `regenerator-runtime/runtime` to ensure ECMAScript feature compatibility and support for async/await syntax. It imports necessary modules: `express` for web application framework, `buffer` and `process` for handling binary data and process information, `webpack` and its configuration for module bundling, `cors` for enabling Cross-Origin Resource Sharing, `redis` for Redis client, `path` for file path manipulations, `execSync` from `child_process` to execute shell commands synchronously, and `fs` for file system operations. 
+                </p>
+                <p>The script initializes an Express application, sets the port to an environment variable `PORT` or defaults to 5000, defines a cache expiration time of 5 minutes, and creates a Redis client connected to a local Redis server. Middleware is configured to enable CORS and parse incoming JSON request bodies. The Redis client logs messages on connection or error events. The script then reads the `index.html` file, removes any `script` tags referencing `bundle.js`, and writes the cleaned content back to the file.</p>
+                <p>Next, the Redis client connects to the server. Upon successful connection, Webpack is run to generate the bundle based on the configuration. If Webpack completes without errors, the Express server is started. Static files are served from the `public` directory, and the root route sends `index.html` to the client.
+                </p>
+                <p>The script handles POST requests to `/callPythonFunction`, where it validates input, sanitizes parameters, and generates a cache key. It checks Redis connectivity and attempts to retrieve cached results. If no cached result is found, it executes a Python script using `execSync`, caches the result, and returns it to the client. Finally, it handles the `SIGINT` signal to gracefully disconnect the Redis client before exiting the process. This setup ensures robust integration of Webpack bundling, Redis caching, static file serving, and Python script execution within the Node.js environment.
+                </p>
+                <div class = "project-section" style = "font-style: italic;">location.py</div>
+                <p>The provided Python script is a sophisticated tool for extracting and validating location information from textual captions. It leverages several libraries and techniques to perform its tasks efficiently. The script starts by importing necessary libraries, including `spacy` for natural language processing, `requests` for making HTTP requests, and `geopy` for geocoding. It also incorporates concurrency with `ThreadPoolExecutor` to handle multiple tasks simultaneously, enhancing performance. 
+                </p>
+                <p>The core function, `find_naturecam_locations(captions)`, processes a list of captions to extract and refine location data. It first defines `process_locations(locations)`, which filters out `None` values and identifies the most accurate location based on the length of addresses and names. If duplicates are found, it selects the most specific one. To generate potential location names, `generate_combinations(source)` creates consecutive word combinations from a given text. The function `generate_substrings(sentence)` further processes sentences to generate and validate substrings that might represent locations. This function cleans the sentence, splits it into words, and constructs substrings of varying lengths, checking for capitalization and validating these substrings as location names. Locations are extracted using `extract_locations(text)`, which utilizes SpaCy's named entity recognition to identify geographic and organizational entities. For validation, `validate_locations(text)` makes HTTP requests to the Google Maps Geocoding API to verify location names, while `get_location_info(location)` retrieves detailed location data, including coordinates and formatted addresses.
+                </p>
+                <p>To handle potential duplicates, `single_location(locationData)` checks for duplicates in both location names and addresses, prioritizing the most specific or longest address. This ensures the most accurate location is selected. The script processes each caption concurrently using `ThreadPoolExecutor` in `process_caption(caption)`, which extracts locations, generates additional data, and appends the results. It aggregates all processed data and resolves it to a single, accurate location. Finally, the script's command-line interface reads JSON input, invokes the main function, and prints the results or errors. It ensures robust error handling and provides clear output formatting. The script effectively combines natural language processing, geocoding, and concurrency to extract and validate location information from textual captions, demonstrating a comprehensive approach to data processing and validation.
+                </p>
+                <div style = "width: 100%; padding-bottom: 0.5em; border-bottom: 0.5px solid black;">Project frontend</div>
+                <div class = "project-section" style = "font-style: italic;">index.html</div>
+                <div class = "project-section" style = "font-style: italic;">get-cams.js</div>
+                <div>
+                    <div style = "width: 65%; float: right; margin-left: 2em; margin-bottom: 1em;">
+                        <video style = "width: 100%;" autoplay loop muted>
+                            <source src="../media/nature_cam/natureCamMain.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class = "media-caption">[ main page ]</div>
+                    </div>
+                    <p>The provided JavaScript code is a comprehensive solution for fetching, processing, and displaying live video information from YouTube channels. It leverages YouTube's Data API to retrieve live videos, processes video information to extract location data using a Python backend, and dynamically updates the HTML content to display the videos along with their respective location details. Additionally, the code manages API query limits, implements caching, and generates a downloadable CSV file with the fetched data.
+                    </p>
+                    <p>The script begins by defining column names for a CSV file, initializing the CSV content by joining these column names with commas and adding a newline character. It sets up several constants, including API_KEY for YouTube Data API authentication, an array of YouTube CHANNEL_IDS to fetch live videos from, MAX_RESULTS to limit the number of results per request to 1, and cacheExpiration for caching purposes. Additional constants like MAX_DAILY_QUERIES, STORAGE_KEY, and LAST_RESET_KEY manage the daily API query limits and track the last reset date in local storage.
+                    </p>
+                    <p>The script selects various DOM elements by their IDs to dynamically update video content and location information, including four iframe elements (iframeVideoOne, iframeVideoTwo, iframeVideoThree, iframeVideoFour) and several elements to display coordinates, addresses, and names of the locations corresponding to the videos. Utility functions include callPythonFunction(param), an asynchronous function that sends a POST request to the backend to call a Python function with specified parameters, handling responses and errors, and returning the result. fetchLiveVideos(channelId) manages API queries by checking the daily query count stored in local storage, resetting it if necessary, and attempting to fetch live video data from the YouTube Data API for a given channel ID. This function uses session storage for caching and resolves with either cached or newly fetched data.
+                    </p>
+                    <p>For fetching and processing video information, getFullVideoInfo(liveVideosFromChannel) processes an array of live videos fetched from a channel, calling getLocations to fetch location details based on the video's title and description. It constructs an object with video and location details for each video, adding default values if no location is found, and updates the liveVideos array with these objects. getLocations(videoTitle, videoDescription) cleans the video title and description to escape any quotes, calls the Python backend to fetch location details, and returns the result from the Python function.
+                    </p>
+                    <p>The script updates the DOM through loadInitialVideos(liveVideos), which updates the iframe sources and location information for the initial set of live videos, and sets up a click event listener on a shuffle button to shuffle the displayed videos. shuffleVideos(liveVideos) shuffles the displayed videos, ensuring four unique videos are selected, and updates the iframe sources and location information accordingly.
+                    </p>
+                    <p>Finally, the init() function initializes the script by fetching live videos from the specified channels and processing them. It calls createVideoIndex to generate the video index and loadInitialVideos to display the initial set of videos. It also includes a comment for a function to display video locations on a map, indicating planned functionality. This comprehensive approach ensures efficient data handling, dynamic content updates, and user-friendly interactions.
+                    </p>
+                </div>
+                <div class = "project-section" style = "font-style: italic;">map.html</div>
+                <div>
+                    <div style = "width: 65%; float: left; margin-right: 2em; margin-bottom: 1em;">
+                        <video style = "width: 100%;" autoplay loop muted>
+                            <source src="../media/nature_cam/naturecamMap.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class = "media-caption">[ map page ]</div>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laudantium aspernatur eum ab neque a sed natus velit quisquam voluptatibus tempore voluptas, culpa quae quod, dignissimos aut placeat vitae quam rerum necessitatibus incidunt consequuntur amet enim reiciendis. Facilis veniam laudantium repellendus modi sapiente tempora dignissimos culpa deleniti! Assumenda, cupiditate, quibusdam corrupti deserunt necessitatibus ab blanditiis ipsam maxime, alias laborum omnis neque quam quia sit quo ea sequi voluptates cum? Autem aliquam minima error doloribus obcaecati delectus ipsum quidem non architecto, saepe, dignissimos consequuntur quod quas enim voluptatem tenetur, aliquid aperiam provident sapiente. Iste amet numquam repellat dolorem impedit et fugiat?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laudantium aspernatur eum ab neque a sed natus velit quisquam voluptatibus tempore voluptas, culpa quae quod, dignissimos aut placeat vitae quam rerum necessitatibus incidunt consequuntur amet enim reiciendis. Facilis veniam laudantium repellendus modi sapiente tempora dignissimos culpa deleniti! Assumenda, cupiditate, quibusdam corrupti deserunt necessitatibus ab blanditiis ipsam maxime, alias laborum omnis neque quam quia sit quo ea sequi voluptates cum? Autem aliquam minima error doloribus obcaecati delectus ipsum quidem non architecto, saepe, dignissimos consequuntur quod quas enim voluptatem tenetur, aliquid aperiam provident sapiente. Iste amet numquam repellat dolorem impedit et fugiat?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laudantium aspernatur eum ab neque a sed natus velit quisquam voluptatibus tempore voluptas, culpa quae quod, dignissimos aut placeat vitae quam rerum necessitatibus incidunt consequuntur amet enim reiciendis. Facilis veniam laudantium repellendus modi sapiente tempora dignissimos culpa deleniti! Assumenda, cupiditate, quibusdam corrupti deserunt necessitatibus ab blanditiis ipsam maxime, alias laborum omnis neque quam quia sit quo ea sequi voluptates cum? Autem aliquam minima error doloribus obcaecati delectus ipsum quidem non architecto, saepe, dignissimos consequuntur quod quas enim voluptatem tenetur, aliquid aperiam provident sapiente. Iste amet numquam repellat dolorem impedit et fugiat?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src = "../js/left-banner.js"></script>
+</body>
+</html>
+
+
+
