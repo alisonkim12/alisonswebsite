@@ -1,2 +1,4 @@
 *.dylib filter=lfs diff=lfs merge=lfs -text
+media/Spotify/*.mp4 filter=lfs diff=lfs merge=lfs -text
+media/nature_cam/*.mp4 filter=lfs diff=lfs merge=lfs -text
 * !text !filter !merge !diff
