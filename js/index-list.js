@@ -1,57 +1,91 @@
 const indexData = [
-  { year: 2024, project: 'Nature Cam', description: "for the times you want to open up a website and what some critters are up to", tools: 'node.js, Google Geocoding API, maptiler, spaCy, Youtube Data API', link: 'nature-cam'},
-  { year: 2024, project: 'Trail of Prayers', description: 'computer + my need to make something beautiful = ', tools: 'Flask, UMAP, NumPy, GloVe, scikit-learn' , link: 'trail-of-prayers'},
-  { year: 2024, project: 'Angel of history', description: 'an interactive metaphor for that one famous Walter Benjamin quote', tools: 'matter.js, ml5.js, news API', link: 'angel-of-history'},
-  { year: 2023, project: 'play (with) music', description: 'my first experimentation with d3.js', tools: 'Spotify API, d3.js, NLTK, scikit-learn, jQuery', link: 'play-with-music' },
-  { year: 2023, project: 'Requiem for a Friend', description: 'an ode to two things I miss from my school', tools: 'javascript', link: 'requiem' },
-  { year: 2023, project: 'Restructuring pedagogical norms in STEM: Towards a socially and ethically conscious approach to Computer Science education', description: 'my undergraduate thesis', link: 'thesis'},
-  { year: 2022, project: 'Swarthmore Marketplace', description: "a full-stack project emulating 'Facebook Marketplace'", tools : 'Flask, Firebase, CSS, HTML', link: 'swarthmore-marketplace'},
-  { year: 2021, project: 'CS16: Critical Theory of Technology', description: 'a student led course I co-taught in my CS department about historial, decolonial, queer, feminist, race, and disability centered inquiries into technology', link: 'CS16'},
-  { year: 2021, project: 'resource guides for undocumented students', description: 'a series of community-based efforts to increase education access to undocumented students and organizing for immigrant rights', tools: 'Canva', link: 'undocumented-resources' },
-  { year: 2020, project: 'CS Computer Lab energy project', description: "an energy management system for Swarthmore College's computer labs", tools: 'Python, Scapy, subprocess, ssh, Grafana, Z Wave', link: 'undocumented-resources'},
+  { year: 2024, project: 'Nature Cam', description: "for the times you want to open up a website and what some critters are up to", tools: 'node.js, Google Geocoding API, maptiler, spaCy, Youtube Data API', link: 'nature-cam', media: '/media/nature_cam/natureCamMain.mp4'},
+  { year: 2024, project: 'Trail of Prayers', description: 'computer + my need to make something beautiful = ', tools: 'Flask, UMAP, NumPy, GloVe, scikit-learn' , link: 'trail-of-prayers', media: ''},
+  { year: 2024, project: 'Angel of history', description: 'an interactive metaphor for that one famous Walter Benjamin quote', tools: 'matter.js, ml5.js, news API', link: 'angel-of-history', media: ''},
+  { year: 2023, project: 'play (with) music', description: 'my first experimentation with d3.js', tools: 'Spotify API, d3.js, NLTK, scikit-learn, jQuery', link: 'play-with-music', media: '/media/Spotify/mainPage.mp4' },
+  { year: 2023, project: 'Requiem for a Friend', description: 'an ode to two things I miss from my school', tools: 'javascript', link: 'requiem', media: ''},
+  { year: 2023, project: 'Restructuring pedagogical norms in STEM: Towards a socially and ethically conscious approach to Computer Science education', description: 'my undergraduate thesis', link: 'thesis', media: ''},
+  { year: 2022, project: 'Swarthmore Marketplace', description: "a full-stack project emulating 'Facebook Marketplace'", tools : 'Flask, Firebase, CSS, HTML', link: 'swarthmore-marketplace', media: '/media/marketplace/CleanShot 2024-04-13 at 15.26.05.mp4'},
+  { year: 2021, project: 'CS16: Critical Theory of Technology', description: 'a student led course I co-taught in my CS department about historial, decolonial, queer, feminist, race, and disability centered inquiries into technology', link: 'CS16', media: '/media/cs16/website-top-page.png'},
+  { year: 2021, project: 'resource guides for undocumented students', description: 'a series of community-based efforts to increase education access to undocumented students and organizing for immigrant rights', tools: 'Canva', link: 'undocumented-resources' , media: '/media/college_access/website_video.mp4'},
+  { year: 2020, project: 'CS Computer Lab energy project', description: "an energy management system for Swarthmore College's computer labs", tools: 'Python, Scapy, subprocess, ssh, Grafana, Z Wave', link: 'undocumented-resources', media: ''},
 ];
 
 function createIndexGrid(){
   const indexMedia = document.getElementById('index-media');
   indexData.forEach((item, index) => {
+    const projectLink = document.createElement('a'); 
+    projectLink.className = 'project-links';
+    projectLink.href = `projects/${item['link']}`;
+
     const projectContainer = document.createElement('div');
     projectContainer.className = 'project-container';
-
-    const projectTitle = document.createElement('div');
-    projectTitle.className = 'project-title';
-    const projectLink = document.createElement('a'); 
-    projectLink.className = 'project-links'
-    projectLink.href = `projects/project-${index+1}.html`; 
-    projectLink.innerHTML = item['project'];
-    projectTitle.appendChild(projectLink);
-
+    projectLink.appendChild(projectContainer);
 
     const projectMedia = document.createElement('div');
     projectMedia.className = 'project-media';
 
-    const projectTagContainer = document.createElement('div');
-    projectTagContainer.className = 'project-tag-container';
+    const projectTitle = document.createElement('div');
+    projectTitle.className = 'project-title';
 
-    if (item['tools']) {
-      const toolList = item['tools'].split(", ");
-      toolList.forEach((tool)=>{
-        const toolButton = document.createElement('span');
-        toolButton.className = 'project-tags';
-        toolButton.innerHTML = tool;
-        projectTagContainer.appendChild(toolButton);
-      });
-    }
+    if (item['media'].toLowerCase().endsWith('.mp4')) {
+        const projectVideo = document.createElement('video');
+        projectVideo.setAttribute('loop', '');
+        projectVideo.setAttribute('autoplay', '');
+        projectVideo.setAttribute('muted', '');
+        const source = document.createElement('source');
+        source.setAttribute('src', item['media']);
+        source.setAttribute('type', 'video/mp4');
+        projectVideo.appendChild(source);
+        projectVideo.style.width = '100%';
+        projectVideo.style.height = 'auto';
+        projectVideo.style.objectFit = 'contain';
+        projectMedia.append(projectVideo);
+        projectTitle.textContent = item['project'];
+    } else if (item['media'].length === 0) {
+        const projectFiller = document.createElement('div');
+        projectFiller.style.width = '100%';
+        projectFiller.style.height = '150px';
+        projectTitle.textContent = 'coming soon!';
+        projectMedia.append(projectFiller);
     
-    const projectDescription = document.createElement('div');
-    projectDescription.className = 'project-description';
-    projectDescription.innerHTML = item['description'];
+    }
+      else {
+        const projectImg = document.createElement('img');
+        projectImg.src = item['media'];
+        projectImg.style.width = '100%';
+        projectImg.style.height = 'auto';
+        projectImg.style.objectFit = 'contain';
+        projectMedia.append(projectImg);
+        projectTitle.textContent = item['project'];
+    }
 
-    projectContainer.appendChild(projectTitle);
     projectContainer.appendChild(projectMedia);
-    projectContainer.appendChild(projectTagContainer);
-    projectContainer.appendChild(projectDescription);
+    projectContainer.appendChild(projectTitle);
+    indexMedia.appendChild(projectLink);
 
-    indexMedia.appendChild(projectContainer);
+    // const projectTagContainer = document.createElement('div');
+    // projectTagContainer.className = 'project-tag-container';
+
+    // if (item['tools']) {
+    //   const toolList = item['tools'].split(", ");
+    //   toolList.forEach((tool)=>{
+    //     const toolButton = document.createElement('span');
+    //     toolButton.className = 'project-tags';
+    //     toolButton.innerHTML = tool;
+    //     projectTagContainer.appendChild(toolButton);
+    //   });
+    // }
+    
+    // const projectDescription = document.createElement('div');
+    // projectDescription.className = 'project-description';
+    // projectDescription.innerHTML = item['description'];
+
+    // projectContainer.appendChild(projectTitle);
+    // projectContainer.appendChild(projectMedia);
+    // projectContainer.appendChild(projectTagContainer);
+    // projectContainer.appendChild(projectDescription);
+
   });
 }
 

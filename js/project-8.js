@@ -20,7 +20,7 @@ async function createImages() {
             document.getElementById('webpage-img-file').style.opacity = "0.8";
         });
 
-        const directoryPath = '../media/cs16/media-container';
+        const directoryPath = '/media/cs16/media-container';
         const files = [
             'cyborg_pres.png',
             'cyborg_question.png',
@@ -46,7 +46,7 @@ async function createImages() {
             img.id = file;
             const tape = document.createElement('img');
             tape.classList.add('tape');
-            tape.src = '../media/cs16/—Pngtree—tape paper tape paper beige_8285190.png'
+            tape.src = '/media/cs16/—Pngtree—tape paper tape paper beige_8285190.png'
             imageContainer.appendChild(img);
             imageContainer.appendChild(tape);
             mediaContainer.appendChild(imageContainer);

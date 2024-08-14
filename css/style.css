@@ -329,6 +329,7 @@ a{
     display: flex;
     flex-direction: column;
     margin-left: auto;
+    margin-right: 1em;
 }
 
 .right-column span{
