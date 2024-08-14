@@ -45,8 +45,8 @@ function createIndexGrid(){
     } else if (item['media'].length === 0) {
         const projectFiller = document.createElement('div');
         projectFiller.style.width = '100%';
-        projectFiller.style.height = '150px';
-        projectTitle.textContent = 'coming soon!';
+        projectFiller.style.height = '170px';
+        projectTitle.textContent = `${item['project']}: Coming soon!`;
         projectMedia.append(projectFiller);
     
     }
