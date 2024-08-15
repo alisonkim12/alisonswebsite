@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(getWeather, 60000);
     getDateAndTime();
     setInterval(getDateAndTime, 1000);
-    // fetchLastCommitDate();
-
 });
 
 function getDateAndTime() {
