@@ -1,11 +1,11 @@
 const indexData = [
-  { year: 2024, project: 'Nature Cam', description: "for the times you want to open up a website and what some critters are up to", tools: 'node.js, Google Geocoding API, maptiler, spaCy, Youtube Data API', link: 'nature-cam', media: '/media/nature_cam/natureCamMain.mp4'},
+  { year: 2024, project: 'Nature Cam', description: "for the times you want to open up a website and what some critters are up to", tools: 'node.js, Google Geocoding API, maptiler, spaCy, Youtube Data API', link: 'nature-cam', media: '/media/nature_cam/natureCamMain-converted.mp4'},
   { year: 2024, project: 'Trail of Prayers', description: 'computer + my need to make something beautiful = ', tools: 'Flask, UMAP, NumPy, GloVe, scikit-learn' , link: 'trail-of-prayers', media: ''},
   { year: 2024, project: 'Angel of history', description: 'an interactive metaphor for that one famous Walter Benjamin quote', tools: 'matter.js, ml5.js, news API', link: 'angel-of-history', media: ''},
-  { year: 2023, project: 'play (with) music', description: 'my first experimentation with d3.js', tools: 'Spotify API, d3.js, NLTK, scikit-learn, jQuery', link: 'play-with-music', media: '/media/Spotify/mainPage.mp4' },
+  { year: 2023, project: 'play (with) music', description: 'my first experimentation with d3.js', tools: 'Spotify API, d3.js, NLTK, scikit-learn, jQuery', link: 'play-with-music', media: '/media/Spotify/mainPage-converted.mp4' },
   { year: 2023, project: 'Requiem for a Friend', description: 'an ode to two things I miss from my school', tools: 'javascript', link: 'requiem', media: ''},
   { year: 2023, project: 'Restructuring pedagogical norms in STEM: Towards a socially and ethically conscious approach to Computer Science education', description: 'my undergraduate thesis', link: 'thesis', media: ''},
-  { year: 2022, project: 'Swarthmore Marketplace', description: "a full-stack project emulating 'Facebook Marketplace'", tools : 'Flask, Firebase, CSS, HTML', link: 'swarthmore-marketplace', media: '/media/marketplace/CreatingPost.mp4'},
+  { year: 2022, project: 'Swarthmore Marketplace', description: "a full-stack project emulating 'Facebook Marketplace'", tools : 'Flask, Firebase, CSS, HTML', link: 'swarthmore-marketplace', media: 'media/marketplace/CreatingPost-converted.mp4'},
   { year: 2021, project: 'CS16: Critical Theory of Technology', description: 'a student led course I co-taught in my CS department about historial, decolonial, queer, feminist, race, and disability centered inquiries into technology', link: 'CS16', media: '/media/cs16/website-top-page.png'},
   { year: 2021, project: 'resource guides for undocumented students', description: 'a series of community-based efforts to increase education access to undocumented students and organizing for immigrant rights', tools: 'Canva', link: 'undocumented-resources' , media: '/media/college_access/website_video.mp4'},
   { year: 2020, project: 'CS Computer Lab energy project', description: "an energy management system for Swarthmore College's computer labs", tools: 'Python, Scapy, subprocess, ssh, Grafana, Z Wave', link: 'undocumented-resources', media: ''},
@@ -33,6 +33,7 @@ function createIndexGrid(){
         projectVideo.setAttribute('loop', '');
         projectVideo.setAttribute('autoplay', '');
         projectVideo.setAttribute('muted', '');
+        projectVideo.setAttribute('playsinline', '');
         const sourceWebm = document.createElement('source');
         const mediaWebm = item['media'].slice(0, -3) + 'webm';
         sourceWebm.setAttribute('src', mediaWebm);
