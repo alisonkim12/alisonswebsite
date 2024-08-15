@@ -5,7 +5,7 @@ const indexData = [
   { year: 2023, project: 'play (with) music', description: 'my first experimentation with d3.js', tools: 'Spotify API, d3.js, NLTK, scikit-learn, jQuery', link: 'play-with-music', media: '/media/Spotify/mainPage.mp4' },
   { year: 2023, project: 'Requiem for a Friend', description: 'an ode to two things I miss from my school', tools: 'javascript', link: 'requiem', media: ''},
   { year: 2023, project: 'Restructuring pedagogical norms in STEM: Towards a socially and ethically conscious approach to Computer Science education', description: 'my undergraduate thesis', link: 'thesis', media: ''},
-  { year: 2022, project: 'Swarthmore Marketplace', description: "a full-stack project emulating 'Facebook Marketplace'", tools : 'Flask, Firebase, CSS, HTML', link: 'swarthmore-marketplace', media: '/media/marketplace/CleanShot 2024-04-13 at 15.26.05.mp4'},
+  { year: 2022, project: 'Swarthmore Marketplace', description: "a full-stack project emulating 'Facebook Marketplace'", tools : 'Flask, Firebase, CSS, HTML', link: 'swarthmore-marketplace', media: '/media/marketplace/CreatingPost.mp4'},
   { year: 2021, project: 'CS16: Critical Theory of Technology', description: 'a student led course I co-taught in my CS department about historial, decolonial, queer, feminist, race, and disability centered inquiries into technology', link: 'CS16', media: '/media/cs16/website-top-page.png'},
   { year: 2021, project: 'resource guides for undocumented students', description: 'a series of community-based efforts to increase education access to undocumented students and organizing for immigrant rights', tools: 'Canva', link: 'undocumented-resources' , media: '/media/college_access/website_video.mp4'},
   { year: 2020, project: 'CS Computer Lab energy project', description: "an energy management system for Swarthmore College's computer labs", tools: 'Python, Scapy, subprocess, ssh, Grafana, Z Wave', link: 'undocumented-resources', media: ''},
@@ -33,10 +33,15 @@ function createIndexGrid(){
         projectVideo.setAttribute('loop', '');
         projectVideo.setAttribute('autoplay', '');
         projectVideo.setAttribute('muted', '');
-        const source = document.createElement('source');
-        source.setAttribute('src', item['media']);
-        source.setAttribute('type', 'video/mp4');
-        projectVideo.appendChild(source);
+        const sourceWebm = document.createElement('source');
+        const mediaWebm = item['media'].slice(0, -3) + 'webm';
+        sourceWebm.setAttribute('src', mediaWebm);
+        projectVideo.appendChild(sourceWebm);
+        sourceWebm.setAttribute('type', 'video/webm');
+        const sourceMP4 = document.createElement('source');
+        sourceMP4.setAttribute('src', item['media']);
+        sourceMP4.setAttribute('type', 'video/mp4');
+        projectVideo.appendChild(sourceMP4);
         projectVideo.style.width = '100%';
         projectVideo.style.height = 'auto';
         projectVideo.style.objectFit = 'contain';
