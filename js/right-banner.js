@@ -51,14 +51,6 @@ function getDateAndTime() {
     }
 }
 
-async function fetchLastCommitDate() {
-    const response = await fetch('https://api.github.com/repos/alisonkim12/alisonswebsite/commits/main');
-    const data = await response.json();
-    const lastCommitDate = new Date(data.commit.committer.date);
-    document.getElementById('last-updated-website').innerText = `${lastCommitDate.toLocaleDateString()}`;
-}
-
-fetchLastCommitDate();
 
 
 // function getDateAndTime(){
