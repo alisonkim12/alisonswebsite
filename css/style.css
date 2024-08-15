@@ -148,8 +148,8 @@ a{
     font-size: 150%;
     position: absolute;
     height: 35px;
-    width: 400px;
-    overflow:hidden;
+    width: fit-content;
+    overflow: hidden;
     font-family: 'Rubik Lines', system-ui;
     float: left;
     padding-right: 4%;
