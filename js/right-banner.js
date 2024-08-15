@@ -49,58 +49,6 @@ function getDateAndTime() {
     }
 }
 
-
-
-// function getDateAndTime(){
-//     // Make API request to WorldTimeAPI
-//     fetch('https://worldtimeapi.org/api/timezone/America/Los_Angeles')
-//         .then(response => response.json())
-//         .then(data => {
-//         // Getting date and day of week: 
-//         const dateTime= data.datetime;
-//         const dayOfWeek = data.day_of_week;
-//         if (dayOfWeek == "1"){
-//             document.getElementById('day-of-week').innerText = "Monday, ";
-//         } else if (dayOfWeek == "2") {
-//             document.getElementById('day-of-week').innerText = "Tuesday, ";
-//         } else if (dayOfWeek == "3") {
-//             document.getElementById('day-of-week').innerText = "Wednesday, ";
-//         } else if (dayOfWeek == "4") {
-//             document.getElementById('day-of-week').innerText = "Thursday, ";
-//         } else if (dayOfWeek == "5") {
-//             document.getElementById('day-of-week').innerText = "Friday, ";
-//         } else if (dayOfWeek == "6") {
-//             document.getElementById('day-of-week').innerText = "Saturday, ";
-//         } else if (dayOfWeek == "0") {
-//             document.getElementById('day-of-week').innerText = "Sunday, ";
-//         }
-//         let AM_or_PM = " AM";
-//         let time_of_day = dateTime.slice(11,16); 
-//         let is_it_day = true; 
-//         if (Number(dateTime.slice(11,13)) >= 19 || Number(dateTime.slice(11,13)) <= 6){
-//             is_it_day = false; 
-//         }
-//         const day_or_night_logo = document.getElementById('day-or-night').className;
-//         if (is_it_day == false && day_or_night_logo == 'fa-solid fa-cloud-sun') {
-//             document.getElementById('day-or-night').classList.remove("fa-cloud-sun");
-//             document.getElementById('day-or-night').classList.add("fa-cloud-moon");
-//         }
-//         // set AM or PM 
-//         if (Number(dateTime.slice(11,13)) > 11){
-//             AM_or_PM = " PM";
-//         }
-//         // I hate 24hr military time 
-//         if (Number(dateTime.slice(11,13)) > 12){
-//             time_of_day = (Number(dateTime.slice(11,13)) - 12).toString()+ ":"+ dateTime.slice(14,16);
-//         }
-//         time_of_day += ":" + dateTime.slice(17,19);
-//         document.getElementById('local-time').innerText = time_of_day + AM_or_PM + " ";
-//         document.getElementById('full-date').innerText = dateTime.slice(0,10);
-//         })
-        
-//         .catch(error => console.error('Error fetching time:', error));   
-// }
-
 function getWeather(){
     const apiKey = '7bc7643c59fa0d6963b4df70a9c05ded';
     const lat = '33.745159';
