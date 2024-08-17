@@ -1,6 +1,6 @@
 const indexData = [
   { year: 2024, project: 'Nature Cam', description: "for the times you want to open up a website and what some critters are up to", tools: 'node.js, Google Geocoding API, maptiler, spaCy, Youtube Data API', link: 'nature-cam', media: '/media/nature_cam/natureCamMain-converted.mp4'},
-  { year: 2024, project: 'Trail of Prayers', description: 'computer + my need to make something beautiful = ', tools: 'Flask, UMAP, NumPy, GloVe, scikit-learn' , link: 'trail-of-prayers', media: ''},
+  { year: 2024, project: 'Trail of Prayers', description: 'computer + my need to make something beautiful = ', tools: 'Flask, UMAP, NumPy, GloVe, scikit-learn' , link: 'trail-of-prayers', media: '/media/trail-of-prayers/TrailVideo2X.mp4'},
   { year: 2024, project: 'Angel of history', description: 'an interactive metaphor for that one famous Walter Benjamin quote', tools: 'matter.js, ml5.js, news API', link: 'angel-of-history', media: ''},
   { year: 2023, project: 'play (with) music', description: 'my first experimentation with d3.js', tools: 'Spotify API, d3.js, NLTK, scikit-learn, jQuery', link: 'play-with-music', media: '/media/Spotify/mainPage-converted.mp4' },
   { year: 2023, project: 'Requiem for a Friend', description: 'an ode to two things I miss from my school', tools: 'javascript', link: 'requiem', media: ''},
@@ -48,6 +48,10 @@ function createIndexGrid(){
         projectVideo.style.objectFit = 'contain';
         projectMedia.append(projectVideo);
         projectTitle.textContent = item['project'];
+        if (item['project'] == 'Trail of Prayers') {
+          projectTitle.style.color = 'white';
+        }
+
     } else if (item['media'].length === 0) {
         const projectFiller = document.createElement('div');
         projectFiller.style.width = '100%';
