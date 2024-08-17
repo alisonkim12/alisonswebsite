@@ -1,0 +1,195 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/basier" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=DM+Mono:wght@300&family=Bungee+Hairline&family=Sono:wght@300&family=Telex&family=Commissioner:wght@300&family=Creepster&family=Nabla&family=Foldit&family=Codystar&family=Libre+Barcode+39+Extended+Text&family=Bungee+Hairline&family=Fontdiner+Swanky&family=Mrs+Saint+Delafield&family=UnifrakturMaguntia&family=Sigmar+One&family=Reenie+Beanie&family=Lora&family=Ewert&family=Dr+Sugiyama&family=Gruppo&family=Marhey&family=Mountains+of+Christmas&family=Moirai+One&family=Moo+Lah+Lah&family=Mynerve&family=Rubik+Glitch&family=Rubik+Burned&family=Rubik+Lines&family=Satisfy&family=Barrio&family=Silkscreen&family=Special+Elite&family=Zeyada&display=swap" rel="stylesheet">        
+    <!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="style_mobile.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/009/266/750/non_2x/sun-icon-design-free-png.png" type="image/png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/projects.css">
+    <script src="https://kit.fontawesome.com/7ed75dc688.js" crossorigin="anonymous"></script>
+    <script src="https://worldtimeapi.org/api/timezone/America/Los_Angeles"></script>
+    <script src = "/js/right-banner.js"></script>
+    <title>alisons⭒computer</title> 
+</head>
+<style>
+    #description-body{
+        font-family: "Commissioner", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 1em;
+        font-size: 0.8em;
+    }
+ 
+    #description-header{ 
+        font-style: italic; 
+        font-size: 1em; 
+        color: rgba(0,0,0,0.6);
+        
+    }
+    .media-caption{
+        font-family: "Sono", monospace;
+        font-size: 0.8em;
+        margin: 1em auto;
+        width: fit-content;
+    }
+    div p{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 0.9em;
+    }
+
+    table{
+        font-size: 0.9em;
+        font-family: "Commissioner", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        border-top: 0.5px solid black;
+        border-left: 0.5px solid black;
+    }
+
+    th, td{
+        font-size: 0.9em;
+        font-family: "Commissioner", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        border-right: 0.5px solid black;
+        border-bottom: 0.5px solid black;
+        padding: 1em;
+    }
+
+    .project-section{
+        font-size: 0.9em;
+        margin: 1em 0em;
+    }
+</style>
+<body>
+    <section>
+        <nav id = "nav-bar" class="banner">
+            <div class="left-header">
+                <div class = "title">
+                    <span>alisons</span>
+                    <span id = "computer">computer</span>
+                </div>
+            </div>
+            <div id = "sub-title"></div>
+            <div class = "right-header">
+                <span id = "line-1">It is <span id = "local-time"></span><i id = "day-or-night" class="fa-solid fa-cloud-sun"></i></span>
+                <span id = "line-2"><i class="ri-calendar-event-fill"></i> <span id = "day-of-week"></span><span id = "full-date"></span></span>
+                <span id = "line-3"><span id = "temperature"></span> & <span id = "weather"></span><img id = 'weather-icon' class = "icon-here"></img></span>
+            </div>
+        </nav>
+    </section>
+    <section id = "section-project-page">
+        <div class="page-buttons">
+            <span id = "link-home"><a href = "/"><i class="ri-arrow-left-up-line"></i> back to main page</a></span>
+            <span id = "link-next-project"><a href = "../nature-cam/index.html">Nature Cam <i class="ri-arrow-right-up-line"></i></a></span>
+        </div>
+        <div class="project-header">
+            <div id="project-title">CS Lab Energy Project</div>
+            <div class = "project-details">
+                <span id="project-year">2020-2021</span><span id="project-tools">Python, C, Scapy, subprocess, ssh, Raspberry Pi, Grafana, Z Wave, InfluxDB</span>
+                <div id="project-link">
+                    <a href = "https://github.com/alisonkim12/CSEnergyProject">github link <i class="ri-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <div id="project-description">
+            <div id="description-body">
+                <div style = "width: 100%; padding-bottom: 0.5em; border-bottom: 0.5px solid black;">Introduction</div>
+                <p>Swarthmore College’s computer science department offers 3.5 classrooms worth of lab computers for lab instructed courses and for student utilization. Particularly during nights and weekends, many go unused.  Nevertheless, they are always “on”, taking up a considerable amount of energy. In efforts to minimize the amount of energy wasted by unused computers, this project aims to design a system that puts inactive computers to “sleep” (low power mode) during appropriate conditions. An initial assessment of monitoring the energy usage of CS computers determined that a computer not in low power mode, but also not in use, consumes an average 20-50 Watts, while a computer on low power mode uses significantly less -- around 5 Watts. Thus, this disparity emphasized the need of having computers be on low power mode for as long as possible. 
+                </p>
+                <p>Therefore, the project’s main objective is to design an algorithm where a computer could effectively dictate the fastest and most accurate way to put itself on low power mode. This would involve creating a set of conditions that would determine when a computer should “go to sleep” and coding various functions which each computer runs to implement these conditions. Other critical elements to consider are ways to “wake” a computer from low power mode non-locally, a method to override the algorithm, and a public online database tracking the energy usage of each computer. Ultimately, this initiative would be implemented to more computers on campus in the effort to always be in search of new, innovative ways of becoming a more environmentally-sustainable campus. 
+                </p>
+                <div style = "width: 100%; padding-bottom: 0.5em; border-bottom: 0.5px solid black;">Objectives</div>
+                <p>The main objectives for this project is to significantly reduce the power consumed by the machines on campus, as part of an initiative to progress towards innovative ways to be a more environmentally friendly campus. By creating a system that monitors energy levels and power consumption while simultaneously running a program that puts computers to low power mode when idle, we can statistically quantify how power consumption changes due to this initiative. This will serve as the foundation for advocacy to continue this line of work and consistently develop practical solutions to ongoing problems of environmental sustainability. In order to fulfill our objectives various components are needed including: monitoring energy and power using plug sensors in the CS lab(s), logging the sensor readings to a database, building a public front-end website with graphs and statistics, measuring power usage and use the measurements to explore policies for putting lab machines into a low-power state (e.g., suspend to RAM), and reducing power consumption in the lab and quantifying the savings (e.g., % reduction, energy costs, etc.).
+                </p>
+                <div style = "width: 100%; padding-bottom: 0.5em; border-bottom: 0.5px solid black;">Target system/environment</div>
+                <p>The target system for this project is the Swarthmore College’s computer science department’s 3.5 classrooms of computer labs, totalling around 135 machines. There are two types of computer models used by the department that on average consumes different levels of power.  The first type, which will be called Type A, consumes an average of 23 watts when on, but idle, while the second type, which we will call Type B,  consumes an average of 46 watts when on, but idle. However, both types of machines on low power mode consumes an average of 4 watts of power. During lab instruction, when most computers are active, depending on users activity, a classroom’s worth of computers can consume 2.5KW of power. 
+                </p>
+                <div class = "project-section" style = "font-style: italic;">Hub and influx database:</div>
+                <p>As of December 7, 2019, we have a Samsung Hub in classroom SCI 240 controlling ZEN15 plugs on all 29 of the computers. (28 + 1 instructor machine at the front.) Hub’s hostname is smarthub.cs.swarthmore.edu, and its MAC address is 28:6D:97:A4:49:3C. The hub is reporting sensor data to an Influx database on influx.cs.swarthmore.edu. 
+                </p>
+                <div style = "width: 100%; padding-bottom: 0.5em; padding-top: 1em; border-bottom: 0.5px solid black;">Methodology -- Part 1: Measuring power consumption</div>
+                <p>To measure and record energy and power consumption, the ZEN15 smart switches from Zooz were utilized. The switches support several features that became convenient for the project’s initiatives, including, a reasonably high maximum load of 15 Amps (1800 W), ability to disable on/off control from the hub (to avoid accidentally cutting power to a lab machine), option to configure how frequently the switch reports power, energy, and other metrics, and Z-Wave radio communication. These switches use Z-Wave to communicate with a central hub. Z-Wave radios operate around 900 MHz, so they don’t interfere with most other consumer communications devices (e.g., WiFi and Bluetooth, which operate at 2.4 GHz). A network of Z-Wave devices organizes itself into a mesh topology, with each device potentially acting as a repeater to route data towards the hub. We’re using a Samsung SmartThings Hub (V3) as the central hub. It reports information to the Samsung’s cloud service, where we can control it with their APIs. The APIs allow users to write code in the Groovy programming language (similar to Java) to build: device handlers, a code that controls the behavior of device(s) that report to the hub, and SmartApps, a code that triggers actions at the hub in response to events on the network. For example, we use a SmartApp to send sensor readings from the hub to a database when a sensor reports data to the hub.
+                </p>
+                <div class = "project-section" style = "font-style: italic;">Alternative Hub</div>
+                <p>If we end up needing more control than Samsung’s SmartThings system gives us, a potential alternative is to build our own hub using a USB Z-Wave radio and a small embedded device like a Raspberry Pi. Such a system, powered by open source software like Home Assistant or OpenHAB, could run entirely locally, without relying on a cloud service. The downside is that it would likely take more work to set it all up.</p>
+                <div class = "project-section" style = "font-style: italic;">Database</div>
+                <p>We’re using InfluxDB running on influx.cs.swarthmore.edu to record sensor measurements. As a time series database, InfluxDB makes it relatively easy to track changes in power usage over time.
+                </p>
+                <div style = "width: 100%; padding-bottom: 0.5em; padding-top: 1em; border-bottom: 0.5px solid black;">Methodology -- Part 2: Local Agent: The sleeping program</div>
+                <div class = "project-section" style = "font-style: italic;">Local Agent</div>
+                <p>The local agent runs on each lab machine as a system service that monitors system usage and decides when to sleep — it collects data and applies the suspension policy. Before sleeping, it should check for reservations and defer sleeping if the machine is reserved. The local agent should send sleep and wakeup events to the influx database to help track the status and usage of each machine.
+                </p>
+                <p>One of the main components of this sleeping program is a python program that consistently runs under the backdrop of each machine (until it goes to sleep) that determines based on various system parameters and policies to sleep to Low Power Mode. As illustrated in Figure 1, there are four parameters/information about the status of each machine that are utilized to reach a decision. This program has the functioning properties in place that allows a computer to locally check whether there are users logged into the computer, the idleness time of the keyboard and mouse activity, CPU intake on running applications, and time of day. This runs in a continuous while loop, where the computer constantly checks the developed criterias every given interval, of which can be modified in a separate INI file that the python program calls.  Currently the computer goes through the loop every 5 minutes.
+                </p>
+                <div class = "project-section" style = "font-style: italic;">Figure 1: User Data Collected</div>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Policy Description</th>
+                        <th>Information</th>
+                        <th>Methodology</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0 users logged into computer, then computer goes to Low Power Mode (LPM)</td>
+                        <td>Who is currently logged in to a computer</td>
+                        <td>Terminal Command “Who, -q”</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>If idleness of keyboard and mouse activity > 3 hours, then LPM.
+                        </td>
+                        <td>Time past since last keyboard/mouse interaction</td>
+                        <td>X11 library: XScreenSaverQueryInfo() can provide the time idle time of the computer in milliseconds</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Low CPU intake and processes like text editor and browsers running on the computer → LPM.
+                        </td>
+                        <td>CPU intake and the respective processes that are currently running on the computer</td>
+                        <td>Command “ps aux” on terminal. Specific command: "ps ax -o %cpu, command [insert vertical bar] sort -r [insert vertical bar] head -n 5" sorts the list by top 5 highest CPU and its respective processes.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>From 2:00:00 AM to 7:00:00 AM, put on LPM
+                        </td>
+                        <td>Current time of day</td>
+                        <td>Terminal command "date"</td>
+                    </tr>
+                </table>
+                <p>Most of the information (including time, number of users logged in, CPU usage) regarding the specific environment of each machine is captured by using a subprocess module to allow the computer to check who is currently logged locally, and return the appropriate message and its respective boolean letting us know whether anyone is currently logged into that given computer. For keyboard and mouse idle time on the machines, we developed a program that iterates over all of the X11 sessions on a machine and queries their idle time. It also iterates over /dev/ptsto determine the idle time of all terminal activity (e.g., SSH sessions). If no users are logged in or the program is unable to retrieve any data for some reason, it will print -1 for both the min and max values. The parameters that dictate the quota of whether or not certain environmental conditions were met were controlled by an INI configuration file that works in conjunction with the aforementioned python, storing other relevant  information such as policy types and time intervals in which the computer should run through the code. 
+                </p>
+                <div style = "width: 100%; padding-bottom: 0.5em; border-bottom: 0.5px solid black;">Methodology -- Part 3: Remote Access</div>
+                <p>The students at Swarthmore College are able to access the computer lab machines in two ways. First method is logging on with their student account on the physical machines available in the lab classrooms. If a computer is asleep when a user is wanting to use the computer in the classroom, they simply need to push a button on the keyboard to wake the computer. 
+                </p>
+                <p>The second method is user access done remotely, where students are able to log into a lab machine from their personal computers. Many students utilize this method so that they are able to access the files and code for their computer science courses from their computer by “sshing” into a lab machine through their terminal window, meaning that students cannot wake up a sleeping computer through a click on the keyboard because they aren’t accessing the lab computers in the department classrooms. Waking a computer from sleep power mode virtually can be accomplished through Wake on Unicast Traffic, a message specifically directed to a sleeping machine without interrupting the workflow of the students. When implementing unicast traffic, the user would only need to ssh into a sleeping machine like normal, and wake a few seconds longer (while the computer wakes up).
+                </p>
+                <p>To send unicast traffic to a machine,  it relies on the machines to answer to a broadcast and relay its hardware address. however if the machine is asleep it won't be able to do so. So first we have a user who wants to ssh into a specific lab machine.  Normally it is able to do that through the CS router that connects to all of the lab machines. So when a student runs the ssh command, it takes the IP address of the specific lab machine. So the CS router needs to figure out the Hardware Address of the machine with that IP address. So the CS router will broadcast and ask what machine has this ip address. Then the machine with this ip address will reply back with its Hardware Address. However, if the machine is asleep, it won’t be able to respond. To address this problem, a small always-on device that can listen for broadcasted ARP requests can be utilized where if the router doesn't hear a reply after some time limit from the computer because it is asleep, the small device responds on its behalf. This device was implemented through a raspberry pi.
+                </p>
+                <p>In a zwave server, a code was written to  allow packet capture for the raspberry pi. A program in the zwave server will read the packet that came in, and make sure it is a request, instead of a reply. Then it will check the IP address of what is being requested. Using a JSON file that stores the IP address and its respective ARP address of every machine in the department. If IP address in the database, then send (print) a reply with the corresponding ARP address, which will in turn wake the machine.  
+                </p>
+                <div style = "width: 100%; padding-bottom: 0.5em; border-bottom: 0.5px solid black;">Methodology -- Part 4: Public Website</div>
+                <p>The web page should serve as the public face of the project, effectively communicating its purpose while offering a user-friendly interface for interaction. At its core, the site must clearly explain the project’s objectives and its impact on minimizing energy consumption across computer lab machines. It should feature detailed power and energy statistics, presented through sophisticated graph visualizations, to provide users with an understanding of the project's efficacy. A limited control interface should be accessible to computer science students and faculty, integrating robust user authentication against the CS department’s LDAP server to ensure secure access. This interface should display a comprehensive list of CS lab machines along with their current sleep status, offering functionality to wake a machine remotely by sending a Wake-on-LAN (WoL) packet. Additionally, users should have the capability to prevent a machine from entering sleep mode for a specified period, enabling them to create reservations for ongoing tasks. The design and construction of the site should leverage platforms like Grafana to generate real-time visualizations, ensuring the data is both accessible and actionable, fostering an environment of informed decision-making regarding energy usage and machine management.
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src = "/js/left-banner.js"></script>
+</body>
+</html>
+
+
+

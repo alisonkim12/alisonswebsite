@@ -5,10 +5,10 @@ const indexData = [
   { year: 2023, project: 'play (with) music', description: 'my first experimentation with d3.js', tools: 'Spotify API, d3.js, NLTK, scikit-learn, jQuery', link: 'play-with-music', media: '/media/Spotify/mainPage-converted.mp4' },
   { year: 2023, project: 'Requiem for a Friend', description: 'an ode to two things I miss from my school', tools: 'javascript', link: 'requiem', media: ''},
   { year: 2023, project: 'Restructuring pedagogical norms in STEM: Towards a socially and ethically conscious approach to Computer Science education', description: 'my undergraduate thesis', link: 'thesis', media: ''},
-  { year: 2022, project: 'Swarthmore Marketplace', description: "a full-stack project emulating 'Facebook Marketplace'", tools : 'Flask, Firebase, CSS, HTML', link: 'swarthmore-marketplace', media: 'media/marketplace/CreatingPost-converted.mp4'},
+  { year: 2022, project: 'Swarthmore Marketplace', description: "a full-stack project emulating 'Facebook Marketplace'", tools : 'Flask, Firebase, CSS, HTML', link: 'swarthmore-marketplace', media: 'media/marketplace/CreatingPost2X.mp4'},
   { year: 2021, project: 'CS16: Critical Theory of Technology', description: 'a student led course I co-taught in my CS department about historial, decolonial, queer, feminist, race, and disability centered inquiries into technology', link: 'CS16', media: '/media/cs16/website-top-page.png'},
   { year: 2021, project: 'resource guides for undocumented students', description: 'a series of community-based efforts to increase education access to undocumented students and organizing for immigrant rights', tools: 'Canva', link: 'undocumented-resources' , media: '/media/college_access/website_video.mp4'},
-  { year: 2020, project: 'CS Computer Lab energy project', description: "an energy management system for Swarthmore College's computer labs", tools: 'Python, Scapy, subprocess, ssh, Grafana, Z Wave', link: 'undocumented-resources', media: ''},
+  { year: 2020, project: 'CS Computer Lab energy project', description: "an energy management system for Swarthmore College's computer labs", tools: 'Python, C, Scapy, subprocess, ssh, Grafana, Z Wave', link: 'CS-Energy', media: ''},
 ];
 
 function createIndexGrid(){
