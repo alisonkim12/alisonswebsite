@@ -30,8 +30,8 @@ function createIndexGrid(){
 
     if (item['media'].toLowerCase().endsWith('.mp4')) {
         const projectVideo = document.createElement('video');
-        projectVideo.setAttribute('loop', '');
-        projectVideo.setAttribute('autoplay', '');
+        // projectVideo.setAttribute('loop', '');
+        // projectVideo.setAttribute('autoplay', '');
         projectVideo.setAttribute('muted', '');
         projectVideo.setAttribute('playsinline', '');
         const sourceWebm = document.createElement('source');

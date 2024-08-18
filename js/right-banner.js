@@ -78,3 +78,19 @@ function getWeather(){
     })
     .catch(error => console.error('Error fetching weather:', error));
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const videos = document.querySelectorAll('videos');
+    if (videos.length > 0) {
+        [...videos].forEach((video)=>{
+            console.log(video);
+            video.loop = true;
+            video.muted = true; 
+            video.addEventListener("canplay", function() {
+                video.play().catch(error => {
+                    console.log("Autoplay failed:", error);
+                });
+            });
+        });
+    }
+});
