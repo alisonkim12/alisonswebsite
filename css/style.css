@@ -209,7 +209,7 @@ a{
     margin-right: 10px;
     border: none;
     padding-top: 20px;
-    width: 55%;
+    width: 90%;
 }
 
 .about-para .about-subheading{
@@ -220,7 +220,7 @@ a{
 }
 
 .about-para p{
-    font-size: 75%;
+    font-size: 80%;
     font-family: "Commissioner", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -236,7 +236,7 @@ a{
 
 
 .about-para ul{
-    font-size: 65%;
+    font-size: 75%;
     font-family: "Commissioner", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
